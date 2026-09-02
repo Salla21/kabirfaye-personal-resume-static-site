@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-800 antialiased;
+}
+
+.dark body {
+  @apply bg-[#0b1120] text-slate-100;
+}
+
+/* Pill tag */
+.pill {
+  @apply inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700;
+}
+
+.dark .pill {
+  @apply border-slate-700 bg-slate-800/60 text-slate-200;
+}
+
+/* Section heading accent underline */
+.section-heading {
+  @apply relative inline-block pb-2 text-lg font-semibold uppercase tracking-wide;
+}
+
+.section-heading::after {
+  content: '';
+  @apply absolute bottom-0 left-0 h-0.5 w-10 bg-accent;
+}
+
+/* Contact button */
+.contact-btn {
+  @apply inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 transition-colors hover:border-accent hover:text-accent;
+}
+
+.dark .contact-btn {
+  @apply border-slate-700 bg-slate-800/50 text-slate-200 hover:border-accent hover:text-accent-hover;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    @apply bg-white text-black;
+  }
+}
