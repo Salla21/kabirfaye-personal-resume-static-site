@@ -38,4 +38,4 @@ next-env.d.ts
 # secrets — never commit tokens
 static-token
 *token*
-*.token
+*.token.github-workflows-backup/
