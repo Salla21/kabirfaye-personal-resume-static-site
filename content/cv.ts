@@ -159,7 +159,7 @@ export const cv: CV = {
             'Defined and rolled out engineering standards (code review, IaC patterns, documentation) adopted across all delivery teams',
           ],
           details:
-            'Own the technical strategy and delivery for the AWS engineering practice — balancing hands-on architecture with team leadership, hiring, and stakeholder management across enterprise customer engagements.',
+            '<strong>PROJECT OVERVIEW</strong>Leading the AWS engineering practice across DACH and EMEA — owning technical strategy, hiring, team development, and delivery quality across enterprise customer engagements.<strong>TEAM FOCUS</strong>Growing and managing a double-digit AWS engineering team through hiring cycles, onboarding, structured mentoring programs, and career frameworks that reduce attrition and build a promotion pipeline.<strong>ROLE FOCUS</strong>Balancing hands-on architecture with engineering leadership — setting standards for code review, IaC patterns, and documentation while driving cross-functional knowledge transfer on Agentic AI, local LLMs, CI/CD shift-left, quantum computing, and NAS.',
         },
         {
           title: 'Senior DevOps Engineer',
@@ -184,7 +184,7 @@ export const cv: CV = {
             'Drove observability with Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, GuardDuty, Security Hub — reducing MTTR by 25%',
           ],
           details:
-            'Hands-on engineering lead for a large enterprise cloud migration and AI platform build, spanning compute, networking, security, CI/CD, and observability.',
+            '<strong>PROJECT OVERVIEW</strong>Cloud migration of a centralized planning and monitoring platform from on-premises to AWS, plus delivery of the Metis AI platform for customer communication processing.<strong>TEAM FOCUS</strong>Hands-on engineering lead for infrastructure, CI/CD, security, and observability — collaborating across platform, application, and security teams to deliver production-ready AWS workloads.<strong>ROLE FOCUS</strong>Owning the technical relationship across AWS compute, networking, AI/ML services, and multicloud (Aviatrix) — making architecture decisions and driving deployment automation, monitoring, and compliance.',
         },
       ],
     },

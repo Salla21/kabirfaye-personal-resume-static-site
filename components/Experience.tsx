@@ -74,9 +74,10 @@ function RoleBlock({ role, nested }: { role: Role; nested: boolean }) {
             {open ? 'Hide project details' : 'Show project details'}
           </button>
           {open ? (
-            <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-              {role.details}
-            </p>
+            <div
+              className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300 space-y-3 [&_strong]:block [&_strong]:text-xs [&_strong]:font-semibold [&_strong]:uppercase [&_strong]:tracking-wider [&_strong]:text-slate-400 [&_strong]:dark:text-slate-500 [&_strong]:mt-4"
+              dangerouslySetInnerHTML={{ __html: role.details }}
+            />
           ) : null}
         </div>
       ) : null}
