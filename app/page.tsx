@@ -5,6 +5,7 @@ import { Experience } from '@/components/Experience';
 import { Education } from '@/components/Education';
 import { Certifications } from '@/components/Certifications';
 import { Skills } from '@/components/Skills';
+import { Impact } from '@/components/Impact';
 
 export default function Page() {
   return (
@@ -15,6 +16,10 @@ export default function Page() {
         <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
           {cv.summary}
         </p>
+      </Section>
+
+      <Section id="impact" title="Key Outcomes">
+        <Impact items={cv.impact} />
       </Section>
 
       <Section id="experience" title="Experience">

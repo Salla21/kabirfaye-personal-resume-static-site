@@ -50,6 +50,8 @@ export interface Education {
   dates: string;
   /** Set true to render an "editable placeholder" hint. */
   placeholder?: boolean;
+  /** Optional subtle note shown beneath the entry. */
+  note?: string;
 }
 
 export interface Certification {
@@ -66,9 +68,19 @@ export interface SkillGroup {
   skills: string[];
 }
 
+export interface ImpactMetric {
+  /** Headline figure, e.g. "40%". */
+  value: string;
+  /** Short label describing the outcome. */
+  label: string;
+  /** One-sentence narrative explaining how the outcome was achieved. */
+  narrative: string;
+}
+
 export interface CV {
   header: Header;
   summary: string;
+  impact: ImpactMetric[];
   experience: Experience[];
   education: Education[];
   certifications: Certification[];
@@ -95,11 +107,38 @@ export const cv: CV = {
   summary:
     'Head of AWS Engineering at Rackspace Technology with 12+ years of IT experience leading teams, designing enterprise cloud platforms, and driving engineering excellence at scale. Internally promoted from Senior DevOps Engineer to lead the AWS engineering team — responsible for technical strategy, team delivery, architecture decisions, and stakeholder management across enterprise cloud migrations, platform engineering, and AI-integrated workloads. Track record of building high-performing engineering teams, mentoring engineers, and delivering measurable outcomes including 40% higher release frequency, 30% faster deployment velocity, 25% lower MTTR, and 20% infrastructure cost reduction.',
 
+  impact: [
+    {
+      value: '40%',
+      label: 'Higher Release Frequency',
+      narrative:
+        'End-to-end CI/CD automation using GitHub Actions and GitLab CI, enabling multiple production releases per day.',
+    },
+    {
+      value: '30%',
+      label: 'Faster Deployment Velocity',
+      narrative:
+        'Standardised Terraform modules and automated pipeline gates cut commit-to-production time.',
+    },
+    {
+      value: '25%',
+      label: 'Lower MTTR',
+      narrative:
+        'Datadog observability, automated runbooks, and structured incident response.',
+    },
+    {
+      value: '20%',
+      label: 'Lower Infrastructure Costs',
+      narrative:
+        'Right-sizing, Reserved Instance planning, serverless migration, container density improvements.',
+    },
+  ],
+
   experience: [
     {
       company: 'Rackspace Technology',
-      dates: 'Nov 2023 - Present',
-      location: 'Frankfurt am Main / Remote',
+      dates: 'Mar 2024 - Present',
+      location: 'Munich, Germany / Remote',
       roles: [
         {
           title: 'Head of AWS Engineering',
@@ -230,128 +269,202 @@ export const cv: CV = {
 
   education: [
     {
-      degree: "Bachelor's degree in Computer Science / IT",
-      institution: '[Update with your institution]',
-      dates: '[Update with dates]',
-      placeholder: true,
+      degree: "Bachelor's degree in Information Technology",
+      institution: '[Institution]',
+      dates: '[Years]',
+      note: 'Institution and dates available on request.',
     },
   ],
 
   certifications: [
     {
-      name: 'AWS Certified Solutions Architect – Professional',
+      name: 'AWS Certified Security – Specialty',
       issuer: 'Amazon Web Services',
-      date: '[Update date]',
-      placeholder: true,
+      date: 'Jun 2025',
+      url: 'https://www.credly.com/users/kabir-faye',
     },
     {
       name: 'AWS Certified DevOps Engineer – Professional',
       issuer: 'Amazon Web Services',
-      date: '[Update date]',
-      placeholder: true,
+      date: 'Apr 2025',
+      url: 'https://www.credly.com/users/kabir-faye',
     },
     {
-      name: 'AWS Certified Security – Specialty',
+      name: 'AWS Certified Solutions Architect – Associate',
       issuer: 'Amazon Web Services',
-      date: '[Update date]',
-      placeholder: true,
+      date: 'May 2024',
+      url: 'https://www.credly.com/users/kabir-faye',
     },
     {
-      name: 'AWS Certified Advanced Networking – Specialty',
+      name: 'AWS Certified AI Practitioner',
       issuer: 'Amazon Web Services',
-      date: '[Update date]',
-      placeholder: true,
+      date: 'In progress',
     },
     {
       name: 'HashiCorp Certified: Terraform Associate',
       issuer: 'HashiCorp',
-      date: '[Update date]',
-      placeholder: true,
+      date: 'Nov 2023',
+      url: 'https://www.credly.com/users/kabir-faye',
     },
     {
-      name: 'Aviatrix Certified Engineer (ACE) – Multicloud',
+      name: 'Aviatrix Multicloud Network Professional',
       issuer: 'Aviatrix',
-      date: '[Update date]',
-      placeholder: true,
+      date: 'Feb 2025',
+      url: 'https://www.credly.com/users/kabir-faye',
+    },
+    {
+      name: 'Aviatrix Multicloud Network Security Specialty',
+      issuer: 'Aviatrix',
+      date: 'May 2025',
+      url: 'https://www.credly.com/users/kabir-faye',
+    },
+    {
+      name: 'Aviatrix Multicloud Network Cloud Backbone Specialty',
+      issuer: 'Aviatrix',
+      date: 'Apr 2025',
+      url: 'https://www.credly.com/users/kabir-faye',
+    },
+    {
+      name: 'Aviatrix Multicloud Network Operations Specialty',
+      issuer: 'Aviatrix',
+      date: 'Feb 2025',
+      url: 'https://www.credly.com/users/kabir-faye',
+    },
+    {
+      name: 'Aviatrix Multicloud Network Associate',
+      issuer: 'Aviatrix',
+      date: 'Feb 2025',
+      url: 'https://www.credly.com/users/kabir-faye',
     },
   ],
 
   skills: [
     {
-      category: 'Cloud Platforms',
-      skills: ['AWS', 'Microsoft Azure'],
-    },
-    {
-      category: 'Kubernetes & Containers',
-      skills: ['Amazon ECS', 'ECS Fargate', 'Docker', 'Amazon ECR'],
-    },
-    {
-      category: 'Infrastructure as Code',
-      skills: ['Terraform', 'Terragrunt', 'CloudFormation', 'Ansible', 'Checkov'],
-    },
-    {
-      category: 'CI/CD & GitOps',
+      category: 'Cloud & Compute',
       skills: [
-        'GitHub Actions',
-        'GitLab CI',
-        'Jenkins',
-        'CodePipeline',
-        'CodeBuild',
-        'CodeDeploy',
-      ],
-    },
-    {
-      category: 'Programming',
-      skills: ['Python', 'Bash'],
-    },
-    {
-      category: 'Networking',
-      skills: [
-        'VPC design',
-        'Transit Gateway',
-        'Route 53',
-        'ALB/NLB',
-        'Aviatrix',
-        'Direct Connect',
-      ],
-    },
-    {
-      category: 'Security & Compliance',
-      skills: [
+        'AWS EC2',
+        'VPC',
         'IAM',
-        'KMS',
-        'WAF',
+        'S3',
+        'ECS',
+        'EKS',
+        'Fargate',
+        'ECR',
+        'Lambda',
+        'RDS',
+        'Aurora',
+        'DynamoDB',
+        'API Gateway',
+        'Route 53',
+        'CloudFront',
         'Cognito',
-        'GuardDuty',
-        'Security Hub',
-        'AWS Config',
-        'Prisma Cloud',
+        'SNS',
+        'SQS',
+        'WAF',
+        'Shield',
       ],
     },
     {
-      category: 'Generative & Agentic AI',
+      category: 'AI & ML Services',
       skills: [
         'Amazon Bedrock',
         'Textract',
         'Transcribe',
         'Translate',
         'Comprehend',
-        'Agentic AI workflows',
-        'MCP',
+        'Rekognition',
+        'Amazon Q',
+        'SageMaker',
+        'AWS Kiro',
+        'Model Context Protocol (MCP)',
+        'Agentic AI',
+        'Claude Code',
+        'GitHub Copilot',
+        'Event-Driven AI Workflows',
       ],
     },
     {
-      category: 'Observability',
-      skills: ['Datadog', 'Prometheus', 'Grafana', 'CloudWatch', 'CloudTrail'],
+      category: 'Containers & Platform',
+      skills: [
+        'Docker',
+        'Amazon ECS',
+        'Amazon EKS',
+        'Kubernetes',
+        'Fargate',
+        'code-server',
+        'Internal Developer Platforms',
+        'Secure SSM Access',
+        'Helm',
+      ],
     },
     {
-      category: 'Leadership',
+      category: 'IaC & CI/CD',
       skills: [
-        'Team leadership',
-        'Mentoring',
-        'Stakeholder management',
-        'Engineering standards',
-        'Talent development',
+        'Terraform',
+        'Terragrunt',
+        'CloudFormation',
+        'Ansible',
+        'Systems Manager',
+        'GitHub Actions',
+        'GitLab CI',
+        'Jenkins',
+        'CodePipeline',
+        'CodeBuild',
+        'CodeDeploy',
+        'ECR',
+        'SonarQube',
+        'Checkov',
+      ],
+    },
+    {
+      category: 'Networking & Multicloud',
+      skills: [
+        'Aviatrix Controller',
+        'Aviatrix CoPilot',
+        'ActiveMesh',
+        'SmartGroups',
+        'Distributed Cloud Firewall',
+        'Central Egress',
+        'Transit Gateway',
+        'Direct Connect',
+        'VPC Design',
+        'ALB/NLB',
+      ],
+    },
+    {
+      category: 'Security & Observability',
+      skills: [
+        'IAM',
+        'Cognito',
+        'KMS',
+        'Secrets Manager',
+        'ACM',
+        'Macie',
+        'Prisma Cloud',
+        'Datadog',
+        'Prometheus',
+        'Grafana',
+        'CloudWatch',
+        'CloudTrail',
+        'GuardDuty',
+        'Security Hub',
+        'AWS Config',
+        'WAF',
+        'Incident Response',
+      ],
+    },
+    {
+      category: 'Programming & Leadership',
+      skills: [
+        'Python',
+        'Shell Scripting',
+        'Linux',
+        'Git',
+        'Agile/Scrum',
+        'Stakeholder Engagement',
+        'Technical Leadership',
+        'Cost Optimization',
+        'AI-Assisted Delivery',
       ],
     },
   ],

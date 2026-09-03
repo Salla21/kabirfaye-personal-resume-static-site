@@ -16,6 +16,11 @@ export function Education({ items }: { items: EducationData[] }) {
           <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
             {edu.institution}
           </p>
+          {edu.note ? (
+            <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">
+              {edu.note}
+            </p>
+          ) : null}
           {edu.placeholder ? (
             <p className="mt-1 text-xs italic text-amber-600 dark:text-amber-400">
               Editable placeholder — update in content/cv.ts
