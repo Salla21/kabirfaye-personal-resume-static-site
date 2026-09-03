@@ -100,7 +100,7 @@ export const cv: CV = {
     },
     languages: [
       { name: 'English', level: 'Fluent', percent: 95 },
-      { name: 'German', level: 'Intermediate', percent: 55 },
+      { name: 'German', level: 'Fluent', percent: 90 },
     ],
   },
 
@@ -194,7 +194,7 @@ export const cv: CV = {
       roles: [
         {
           title: 'Senior Principal Cloud Architect',
-          dates: 'Apr 2020 - Feb 2024',
+          dates: '',
           tech: [
             'AWS Organizations',
             'Control Tower',
@@ -220,7 +220,7 @@ export const cv: CV = {
       roles: [
         {
           title: 'AWS Cloud Consultant',
-          dates: 'Feb 2019 - Mar 2020',
+          dates: '',
           tech: [
             'AWS',
             'VPC',
@@ -245,7 +245,7 @@ export const cv: CV = {
       roles: [
         {
           title: 'AWS Cloud Engineer',
-          dates: 'Jan 2017 - Jan 2019',
+          dates: '',
           tech: [
             'AWS',
             'EC2',
@@ -269,10 +269,19 @@ export const cv: CV = {
 
   education: [
     {
-      degree: "Bachelor's degree in Information Technology",
-      institution: '[Institution]',
-      dates: '[Years]',
-      note: 'Institution and dates available on request.',
+      degree: 'Bachelor of Science in Computer Engineering',
+      institution: 'University of The Gambia, Banjul',
+      dates: '2009 - 2013',
+    },
+    {
+      degree: 'Diploma in Software Application',
+      institution: 'Microtech Institute of Technology',
+      dates: '2012',
+    },
+    {
+      degree: 'Diploma in Information Technology & Hardware',
+      institution: 'QuantumNet Institute of Technology',
+      dates: '2011 - 2012',
     },
   ],
 
@@ -335,6 +344,21 @@ export const cv: CV = {
       issuer: 'Aviatrix',
       date: 'Feb 2025',
       url: 'https://www.credly.com/users/kabir-faye',
+    },
+    {
+      name: 'Artificial Intelligence and Business Strategy',
+      issuer: 'LinkedIn Learning',
+      date: 'Mar 2024',
+    },
+    {
+      name: 'Generative AI for Business Leaders',
+      issuer: 'LinkedIn Learning',
+      date: 'Mar 2024',
+    },
+    {
+      name: 'Responsive Web Design',
+      issuer: 'FreeCodeCamp',
+      date: '2023',
     },
   ],
 
@@ -454,17 +478,30 @@ export const cv: CV = {
       ],
     },
     {
-      category: 'Programming & Leadership',
+      category: 'Programming',
       skills: [
         'Python',
+        'Go',
+        'Bash',
         'Shell Scripting',
         'Linux',
         'Git',
+      ],
+    },
+    {
+      category: 'Leadership & Soft Skills',
+      skills: [
+        'Stakeholder Management',
+        'Executive-level Facilitation',
+        'Technical Presentations',
+        'Cross-cultural Team Leadership',
+        'Mentoring & Coaching',
+        'AWS Cloud Computing Instructor (Global Elite Computing)',
         'Agile/Scrum',
-        'Stakeholder Engagement',
-        'Technical Leadership',
         'Cost Optimization',
         'AI-Assisted Delivery',
+        'Talent Development',
+        'Career Frameworks',
       ],
     },
   ],
