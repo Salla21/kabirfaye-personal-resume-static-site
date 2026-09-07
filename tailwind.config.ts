@@ -14,6 +14,7 @@ const config: Config = {
           DEFAULT: '#3B82F6',
           hover: '#60A5FA',
         },
+        offwhite: '#FAF9F7',
       },
       maxWidth: {
         content: '900px',

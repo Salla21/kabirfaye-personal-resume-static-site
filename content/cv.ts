@@ -90,22 +90,22 @@ export interface CV {
 export const cv: CV = {
   header: {
     name: 'Kabir Faye',
-    title: 'Head of AWS Engineering | Cloud Platform & DevOps Leader',
+    title: 'Cloud Solutions Architect | Head of Engineering',
     location: 'Stuttgart, Baden-Württemberg, Germany',
     contacts: {
       email: 'fayekabir21@yahoo.com',
       linkedin: 'https://www.linkedin.com/in/kabir-faye',
       github: 'https://github.com/Salla21',
-      pdf: '', // e.g. '/kabir-faye-cv.pdf' — drop a PDF in /public to enable
+      pdf: '/resume', // printable page opened in a new tab
     },
     languages: [
       { name: 'English', level: 'Fluent', percent: 95 },
-      { name: 'German', level: 'Fluent', percent: 90 },
+      { name: 'German', level: 'Advanced', percent: 80 },
     ],
   },
 
   summary:
-    'Head of AWS Engineering at Rackspace Technology with 12+ years of IT experience leading teams, designing enterprise cloud platforms, and driving engineering excellence at scale. Internally promoted from Senior DevOps Engineer to lead the AWS engineering team — responsible for technical strategy, team delivery, architecture decisions, and stakeholder management across enterprise cloud migrations, platform engineering, and AI-integrated workloads. Track record of building high-performing engineering teams, mentoring engineers, and delivering measurable outcomes including 40% higher release frequency, 30% faster deployment velocity, 25% lower MTTR, and 20% infrastructure cost reduction.',
+    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years across DevOps, cloud architecture, networking, and programming. Led multi-million dollar cloud transformations across automotive and retail. Designing and delivering generative AI solutions, including multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Focused on building high-performing engineering teams and delivering measurable business outcomes.',
 
   impact: [
     {
@@ -155,11 +155,11 @@ export const cv: CV = {
           results: [
             'Grew and led a double-digit AWS engineering team through hiring cycles, onboarding, and talent development',
             'Established mentoring programs and career frameworks that reduced attrition and built a promotion pipeline, ensuring project continuity across customer engagements',
-            'Led cross-functional knowledge transfer sessions across DACH and EMEA covering Agentic AI on Bedrock, local LLMs, CI/CD shift-left, quantum computing, and NAS',
+            'Led cross-functional knowledge transfer sessions across DACH and EMEA covering Agentic AI on Bedrock, local LLMs, CI/CD shift-left, and Forward Deployed Engineering',
             'Defined and rolled out engineering standards (code review, IaC patterns, documentation) adopted across all delivery teams',
           ],
           details:
-            '<strong>PROJECT OVERVIEW</strong>Leading the AWS engineering practice across DACH and EMEA — owning technical strategy, hiring, team development, and delivery quality across enterprise customer engagements.<strong>TEAM FOCUS</strong>Growing and managing a double-digit AWS engineering team through hiring cycles, onboarding, structured mentoring programs, and career frameworks that reduce attrition and build a promotion pipeline.<strong>ROLE FOCUS</strong>Balancing hands-on architecture with engineering leadership — setting standards for code review, IaC patterns, and documentation while driving cross-functional knowledge transfer on Agentic AI, local LLMs, CI/CD shift-left, quantum computing, and NAS.',
+            '<strong>PROJECT OVERVIEW</strong>Leading the AWS engineering practice across DACH and EMEA — owning technical strategy, hiring, team development, and delivery quality across enterprise customer engagements.<strong>TEAM FOCUS</strong>Growing and managing a double-digit AWS engineering team through hiring cycles, onboarding, structured mentoring programs, and career frameworks that reduce attrition and build a promotion pipeline.<strong>ROLE FOCUS</strong>Balancing hands-on architecture with engineering leadership — setting standards for code review, IaC patterns, and documentation while driving cross-functional knowledge transfer on Agentic AI, local LLMs, CI/CD shift-left, and Forward Deployed Engineering.',
         },
         {
           title: 'Senior DevOps Engineer',
@@ -287,6 +287,11 @@ export const cv: CV = {
       degree: 'Diploma in Information Technology & Hardware',
       institution: 'QuantumNet Institute of Technology',
       dates: '2011 - 2012',
+    },
+    {
+      degree: 'Responsive Web Design Certification',
+      institution: 'freeCodeCamp',
+      dates: '2023',
     },
   ],
 
@@ -491,6 +496,18 @@ export const cv: CV = {
         'Shell Scripting',
         'Linux',
         'Git',
+      ],
+    },
+    {
+      category: 'FinOps & Cost Optimization',
+      skills: [
+        'Cloud Cost Management',
+        'Resource Optimization',
+        'AWS Cost Explorer',
+        'Azure Cost Management',
+        'Reserved Instance Planning',
+        'FinOps Practices',
+        'Right-sizing',
       ],
     },
     {

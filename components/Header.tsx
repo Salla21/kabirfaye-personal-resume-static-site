@@ -1,8 +1,8 @@
-import { Github, Linkedin, Mail, MapPin, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, FileText, Languages } from 'lucide-react';
 import type { Header as HeaderData } from '@/content/cv';
 import { ThemeToggle } from './ThemeToggle';
 
-export function Header({ data }: { data: HeaderData }) {
+export function Header({ data }: Readonly<{ data: HeaderData }>) {
   const { name, title, location, contacts, languages } = data;
 
   return (
@@ -18,7 +18,7 @@ export function Header({ data }: { data: HeaderData }) {
         <span>{location}</span>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="mt-6 flex flex-nowrap items-center gap-2 overflow-x-auto">
         <a className="contact-btn" href={`mailto:${contacts.email}`}>
           <Mail className="h-4 w-4" aria-hidden="true" />
           <span>Email</span>
@@ -41,46 +41,34 @@ export function Header({ data }: { data: HeaderData }) {
           <Github className="h-4 w-4" aria-hidden="true" />
           <span>GitHub</span>
         </a>
-        {contacts.pdf ? (
-          <a
-            className="contact-btn"
-            href={contacts.pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FileText className="h-4 w-4" aria-hidden="true" />
-            <span>PDF</span>
-          </a>
-        ) : null}
+        <a
+          className="contact-btn"
+          href={contacts.pdf || '/resume'}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FileText className="h-4 w-4" aria-hidden="true" />
+          <span>PDF</span>
+        </a>
+        <a className="contact-btn" href="/de">
+          <Languages className="h-4 w-4" aria-hidden="true" />
+          <span>DE</span>
+        </a>
         <ThemeToggle />
       </div>
 
       {languages.length > 0 ? (
-        <div className="mt-8 max-w-md space-y-3">
+        <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-2 text-sm">
           {languages.map((lang) => (
-            <div key={lang.name}>
-              <div className="mb-1 flex items-center justify-between text-sm">
-                <span className="font-medium text-slate-700 dark:text-slate-200">
-                  {lang.name}
-                </span>
-                <span className="text-slate-500 dark:text-slate-400">
-                  {lang.level}
-                </span>
-              </div>
-              <div
-                className="h-1.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"
-                role="progressbar"
-                aria-label={`${lang.name} proficiency`}
-                aria-valuenow={lang.percent}
-                aria-valuemin={0}
-                aria-valuemax={100}
-              >
-                <div
-                  className="h-full rounded-full bg-accent"
-                  style={{ width: `${lang.percent}%` }}
-                />
-              </div>
-            </div>
+            <span key={lang.name} className="inline-flex items-center gap-2">
+              <span className="font-medium text-slate-700 dark:text-slate-200">
+                {lang.name}
+              </span>
+              <span className="text-slate-400 dark:text-slate-500">—</span>
+              <span className="text-slate-500 dark:text-slate-400">
+                {lang.level}
+              </span>
+            </span>
           ))}
         </div>
       ) : null}
