@@ -370,6 +370,11 @@ export const cv: CV = {
       issuer: 'FreeCodeCamp',
       date: '2023',
     },
+    {
+      name: 'AI-Ready (Foundational)',
+      issuer: 'Rackspace Technology',
+      date: '2025',
+    },
   ],
 
   skills: [
