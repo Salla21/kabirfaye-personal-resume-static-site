@@ -141,7 +141,7 @@ export const cv: CV = {
       location: 'Munich, Germany / Remote',
       roles: [
         {
-          title: 'Head of AWS Engineering',
+          title: 'Professional Services Delivery Engineer',
           dates: 'Nov 2025 - Present',
           project: 'AWS Engineering Practice',
           tech: [
