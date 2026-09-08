@@ -53,4 +53,15 @@ body {
   body {
     @apply bg-white text-black;
   }
+  /* Ensure backgrounds/colors on the resume are honored by the printer. */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* A4/Letter-friendly page margins for printed documents. */
+@page {
+  size: A4;
+  margin: 14mm;
 }
