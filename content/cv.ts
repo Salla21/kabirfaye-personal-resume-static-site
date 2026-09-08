@@ -112,7 +112,7 @@ export const cv: CV = {
       value: '40%',
       label: 'Higher Release Frequency',
       narrative:
-        'End-to-end CI/CD automation using GitHub Actions and GitLab CI, enabling multiple production releases per day.',
+        'End-to-end CI/CD automation using GitHub Actions, GitLab CI, AWS CodePipeline, CodeBuild, and CodeDeploy, enabling multiple production releases per day.',
     },
     {
       value: '30%',
@@ -124,7 +124,7 @@ export const cv: CV = {
       value: '25%',
       label: 'Lower MTTR',
       narrative:
-        'Datadog observability, automated runbooks, and structured incident response.',
+        'Observability across Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, CloudTrail, GuardDuty, and Security Hub, with automated runbooks and structured incident response.',
     },
     {
       value: '20%',
