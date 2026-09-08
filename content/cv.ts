@@ -374,10 +374,16 @@ export const cv: CV = {
       date: '2023',
     },
     {
-      name: 'AI-Ready (Foundational)',
+      name: 'AI-Ready',
       issuer: 'Rackspace Technology',
-      date: '2025',
+      date: 'Nov 2024',
       url: 'https://www.credly.com/badges/c5d85d9a-59ff-4620-9d27-5862b012a5e4/linked_in_profile',
+    },
+    {
+      name: 'AI-Ready',
+      issuer: 'Rackspace Technology',
+      date: 'Apr 2024',
+      url: 'https://www.credly.com/badges/1e173024-7796-4e7a-9fad-0ece6aefaeb1/linked_in_profile',
     },
   ],
 
