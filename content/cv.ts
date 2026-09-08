@@ -360,11 +360,13 @@ export const cv: CV = {
       name: 'Artificial Intelligence and Business Strategy',
       issuer: 'LinkedIn Learning',
       date: 'Mar 2024',
+      url: 'https://www.linkedin.com/learning/certificates/0355c9bfcc9bbf298b24877ed3c8d33c42387698c8ff41c309f38d54c6f92baa',
     },
     {
       name: 'Generative AI for Business Leaders',
       issuer: 'LinkedIn Learning',
       date: 'Mar 2024',
+      url: 'https://www.linkedin.com/learning/certificates/2ec3816014e5dc6110982df703ebfec583204a34be790153383d851259c09716',
     },
     {
       name: 'Responsive Web Design',
@@ -375,6 +377,7 @@ export const cv: CV = {
       name: 'AI-Ready (Foundational)',
       issuer: 'Rackspace Technology',
       date: '2025',
+      url: 'https://www.credly.com/badges/c5d85d9a-59ff-4620-9d27-5862b012a5e4/linked_in_profile',
     },
   ],
 
@@ -452,6 +455,8 @@ export const cv: CV = {
         'CodeBuild',
         'CodeDeploy',
         'ECR',
+        'Nexus',
+        'AWS Artifact',
         'SonarQube',
         'Checkov',
         'TFLint',
