@@ -95,7 +95,7 @@ export const cv: CV = {
     contacts: {
       email: 'fayekabir21@yahoo.com',
       linkedin: 'https://www.linkedin.com/in/kabir-faye',
-      github: 'https://github.com/Salla21',
+      github: 'https://github.com/Salla21?tab=repositories',
       pdf: '/resume', // printable page opened in a new tab
     },
     languages: [

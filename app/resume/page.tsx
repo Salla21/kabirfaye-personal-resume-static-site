@@ -6,17 +6,51 @@ export const metadata: Metadata = {
   description: `${cv.header.name} — ${cv.header.title}. Printable, ATS-optimized resume.`,
 };
 
+// ---------------------------------------------------------------------------
+// Design system (blue / white / black, print-safe)
+// ---------------------------------------------------------------------------
+const NAVY = '#0B3D91'; // headings, name, rules, label lead-ins
+const NAVY_DEEP = '#082B66'; // name / strongest accent
+const INK = '#1A1A1A'; // body text (near-black for crisp print)
+const PAPER = '#F1EDE4'; // slightly darker, warmer off-white
+
 /**
- * Section wrapper: an uppercase, letter-spaced bold title with a full-width
- * thin bottom rule underneath (Rostyslav-style), followed by the section body.
+ * A bullet where a "Label: rest of sentence" is rendered with the label in
+ * bold navy (matching the reference design). Falls back to plain text when
+ * there is no leading label.
+ */
+function ImpactBullet({ text }: Readonly<{ text: string }>) {
+  const idx = text.indexOf(':');
+  // Only treat as a label if the colon appears early (a short lead-in phrase).
+  if (idx > 0 && idx <= 42) {
+    const label = text.slice(0, idx);
+    const rest = text.slice(idx + 1).trim();
+    return (
+      <li className="leading-relaxed">
+        <span className="font-bold" style={{ color: NAVY }}>
+          {label}:
+        </span>{' '}
+        <span>{rest}</span>
+      </li>
+    );
+  }
+  return <li className="leading-relaxed">{text}</li>;
+}
+
+/**
+ * Section wrapper: an uppercase, letter-spaced navy title with a strong
+ * full-width rule underneath.
  */
 function Section({
   title,
   children,
 }: Readonly<{ title: string; children: React.ReactNode }>) {
   return (
-    <section className="mt-6 break-inside-avoid">
-      <h2 className="mb-3 border-b border-neutral-300 pb-1 text-[13px] font-bold uppercase tracking-[0.18em] text-neutral-900">
+    <section className="mt-7 break-inside-avoid print:mt-5">
+      <h2
+        className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] print:text-[11.5px]"
+        style={{ color: NAVY, borderBottom: `2px solid ${NAVY}` }}
+      >
         {title}
       </h2>
       {children}
@@ -42,7 +76,7 @@ export default function ResumePage() {
     contactParts.push({
       id: 'email',
       node: (
-        <a href={`mailto:${header.contacts.email}`} className="underline">
+        <a href={`mailto:${header.contacts.email}`} className="hover:underline">
           {header.contacts.email}
         </a>
       ),
@@ -52,7 +86,13 @@ export default function ResumePage() {
     contactParts.push({
       id: 'linkedin',
       node: (
-        <a href={header.contacts.linkedin} className="underline">
+        <a
+          href={header.contacts.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium hover:underline"
+          style={{ color: NAVY }}
+        >
           {header.contacts.linkedin.replace(/^https?:\/\//, '')}
         </a>
       ),
@@ -62,8 +102,16 @@ export default function ResumePage() {
     contactParts.push({
       id: 'github',
       node: (
-        <a href={header.contacts.github} className="underline">
-          {header.contacts.github.replace(/^https?:\/\//, '')}
+        <a
+          href={header.contacts.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium hover:underline"
+          style={{ color: NAVY }}
+        >
+          {header.contacts.github
+            .replace(/^https?:\/\//, '')
+            .replace(/\?tab=repositories$/, '')}
         </a>
       ),
     });
@@ -71,36 +119,61 @@ export default function ResumePage() {
 
   return (
     // Force a light, print-safe surface regardless of the site's dark theme.
-    <div className="min-h-screen bg-[#FAF9F7] print:min-h-0 print:bg-white">
-      <main className="mx-auto max-w-[800px] bg-[#FAF9F7] px-8 py-10 font-sans text-[15px] leading-relaxed text-neutral-900 print:max-w-none print:px-0 print:py-0 print:text-[11.5px] print:leading-snug">
-        {/* Non-printing hint bar */}
-        <div className="no-print mb-6 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm text-neutral-600">
-          Press{' '}
-          <span className="font-semibold text-neutral-900">Cmd/Ctrl + P</span>{' '}
-          to save as PDF.
+    <div
+      className="min-h-screen py-8 print:min-h-0 print:bg-white print:py-0"
+      style={{ backgroundColor: '#E9E4D8' }}
+    >
+      {/* Non-printing hint bar */}
+      <div className="no-print mx-auto mb-6 max-w-[820px] px-6">
+        <div
+          className="flex items-center justify-between rounded-lg border px-4 py-2.5 text-sm shadow-sm"
+          style={{ backgroundColor: '#FFFFFF', borderColor: '#D8D2C4', color: INK }}
+        >
+          <span>
+            Press{' '}
+            <span className="font-semibold" style={{ color: NAVY }}>
+              Cmd/Ctrl + P
+            </span>{' '}
+            to save as PDF.
+          </span>
+          <span className="text-xs" style={{ color: '#7A7466' }}>
+            A4 · single column · ATS-friendly
+          </span>
         </div>
+      </div>
 
+      {/* The document sheet */}
+      <main
+        className="mx-auto max-w-[820px] px-10 py-10 font-sans text-[13.5px] leading-relaxed shadow-[0_10px_40px_rgba(11,61,145,0.12)] ring-1 print:max-w-none print:px-0 print:py-0 print:text-[11px] print:leading-snug print:shadow-none print:ring-0"
+        style={{ backgroundColor: PAPER, color: INK, ['--tw-ring-color' as string]: '#DED8CA' }}
+      >
         {/* ---------------------------------------------------------------- */}
         {/* Header                                                            */}
         {/* ---------------------------------------------------------------- */}
-        <header className="break-inside-avoid pb-4">
-          <h1 className="text-4xl font-bold tracking-tight text-neutral-900 print:text-3xl">
+        <header className="break-inside-avoid text-center">
+          <h1
+            className="text-[34px] font-bold uppercase tracking-[0.06em] print:text-[27px]"
+            style={{ color: NAVY_DEEP }}
+          >
             {header.name}
           </h1>
-          <p className="mt-1 text-lg font-medium text-neutral-600 print:text-base">
+          <p
+            className="mt-1 text-[15px] font-semibold print:text-[12.5px]"
+            style={{ color: INK }}
+          >
             {header.title}
           </p>
 
           {contactParts.length > 0 ? (
-            <p className="mt-2 flex flex-wrap items-center gap-x-1.5 text-sm text-neutral-700 print:text-[11px]">
+            <p className="mt-2.5 flex flex-wrap items-center justify-center gap-x-2 text-[12.5px] print:text-[10.5px]">
               {contactParts.map((part, i) => (
                 <span
                   key={part.id}
-                  className="inline-flex items-center gap-x-1.5"
+                  className="inline-flex items-center gap-x-2"
                 >
                   {i > 0 ? (
-                    <span aria-hidden className="text-neutral-400">
-                      ·
+                    <span aria-hidden style={{ color: '#B9B2A2' }}>
+                      |
                     </span>
                   ) : null}
                   {part.node}
@@ -109,96 +182,59 @@ export default function ResumePage() {
             </p>
           ) : null}
 
-          {header.languages.length > 0 ? (
-            <p className="mt-1.5 text-sm text-neutral-700 print:text-[11px]">
-              <span className="font-semibold text-neutral-900">Languages: </span>
-              {header.languages
-                .map((l) => `${l.name} — ${l.level}`)
-                .join(' · ')}
-            </p>
-          ) : null}
+          <div
+            className="mx-auto mt-3 h-[3px] w-full print:mt-2"
+            style={{ backgroundColor: NAVY }}
+          />
         </header>
 
         {/* ---------------------------------------------------------------- */}
         {/* Summary                                                           */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Summary">
-          <p className="text-[15px] leading-relaxed text-neutral-800 print:text-[11.5px]">
-            {summary}
-          </p>
+        <Section title="Executive Summary">
+          <p className="text-justify leading-relaxed">{summary}</p>
         </Section>
 
         {/* ---------------------------------------------------------------- */}
         {/* Experience                                                        */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Experience">
-          <div className="space-y-5">
+        <Section title="Professional Experience">
+          <div className="space-y-4">
             {experience.map((exp) => (
               <article key={exp.company} className="break-inside-avoid">
-                <div className="flex items-baseline justify-between gap-4">
-                  <h3 className="text-[15px] font-bold text-neutral-900 print:text-[12px]">
-                    {exp.company}
-                  </h3>
-                  {exp.dates ? (
-                    <span className="shrink-0 text-sm font-medium text-neutral-600 print:text-[11px]">
-                      {exp.dates}
-                    </span>
-                  ) : null}
-                </div>
-                {exp.location ? (
-                  <p className="text-sm text-neutral-500 print:text-[10.5px]">
-                    {exp.location}
-                  </p>
-                ) : null}
-
-                <div className="mt-2 space-y-4">
-                  {exp.roles.map((role) => (
-                    <div key={role.title} className="break-inside-avoid">
-                      <div className="flex items-baseline justify-between gap-4">
-                        <h4 className="text-[14px] font-semibold text-neutral-900 print:text-[11.5px]">
-                          {role.title}
-                        </h4>
-                        {role.dates ? (
-                          <span className="shrink-0 text-sm text-neutral-600 print:text-[11px]">
-                            {role.dates}
-                          </span>
-                        ) : null}
-                      </div>
-
-                      {role.project ? (
-                        <p className="text-sm italic text-neutral-600 print:text-[11px]">
-                          Project: {role.project}
-                        </p>
-                      ) : null}
-
-                      {role.tech.length > 0 ? (
-                        <p className="mt-1 text-[12px] text-neutral-500 print:text-[10px]">
-                          {role.tech.join(' · ')}
-                        </p>
-                      ) : null}
-
-                      {role.results.length > 0 ? (
-                        <>
-                          <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-neutral-500 print:text-[9.5px]">
-                            Results &amp; Impact
-                          </p>
-                          <ul className="mt-1 list-disc space-y-1 pl-5 text-[14px] leading-relaxed text-neutral-800 print:text-[11px]">
-                            {role.results.map((r) => (
-                              <li key={r}>{r}</li>
-                            ))}
-                          </ul>
-                        </>
-                      ) : null}
-
-                      {role.details ? (
-                        <div
-                          className="mt-2 space-y-1 text-[14px] leading-relaxed text-neutral-800 print:text-[11px] [&_strong]:mt-2.5 [&_strong]:block [&_strong]:text-[11px] [&_strong]:font-semibold [&_strong]:uppercase [&_strong]:tracking-wider [&_strong]:text-neutral-500 print:[&_strong]:text-[9.5px]"
-                          dangerouslySetInnerHTML={{ __html: role.details }}
-                        />
-                      ) : null}
+                {exp.roles.map((role, ri) => (
+                  <div
+                    key={role.title}
+                    className={ri > 0 ? 'mt-3 break-inside-avoid' : 'break-inside-avoid'}
+                  >
+                    <div className="flex items-baseline justify-between gap-4">
+                      <h3
+                        className="text-[14px] font-bold print:text-[11.5px]"
+                        style={{ color: NAVY }}
+                      >
+                        {role.title}
+                        <span style={{ color: INK }}> | {exp.company}</span>
+                      </h3>
+                      <span
+                        className="shrink-0 text-[12px] font-semibold print:text-[10.5px]"
+                        style={{ color: '#55503f' }}
+                      >
+                        {role.dates || exp.dates}
+                      </span>
                     </div>
-                  ))}
-                </div>
+
+                    {role.results.length > 0 ? (
+                      <ul
+                        className="mt-1.5 list-disc space-y-1 pl-5 text-[13px] print:text-[10.5px]"
+                        style={{ color: INK }}
+                      >
+                        {role.results.map((r) => (
+                          <ImpactBullet key={r} text={r} />
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                ))}
               </article>
             ))}
           </div>
@@ -208,48 +244,70 @@ export default function ResumePage() {
         {/* Education                                                         */}
         {/* ---------------------------------------------------------------- */}
         <Section title="Education">
-          <ul className="space-y-1.5">
+          <ul className="space-y-1">
             {education.map((e) => (
               <li
                 key={`${e.degree}-${e.institution}`}
-                className="text-[14px] leading-relaxed text-neutral-800 print:text-[11px]"
+                className="text-[13px] print:text-[10.5px]"
               >
-                <span className="font-semibold text-neutral-900">{e.degree}</span>
+                <span className="font-semibold" style={{ color: INK }}>
+                  {e.degree}
+                </span>
                 {' — '}
                 {e.institution}
                 {e.dates ? (
-                  <span className="text-neutral-500"> ({e.dates})</span>
+                  <span style={{ color: '#6f6a59' }}> | {e.dates}</span>
                 ) : null}
               </li>
             ))}
           </ul>
+          {header.languages.length > 0 ? (
+            <p className="mt-2 text-[13px] print:text-[10.5px]">
+              <span className="font-semibold" style={{ color: NAVY }}>
+                Languages:{' '}
+              </span>
+              {header.languages
+                .map((l) => `${l.name} (${l.level})`)
+                .join(' · ')}
+            </p>
+          ) : null}
         </Section>
 
         {/* ---------------------------------------------------------------- */}
         {/* Certifications                                                    */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Certifications">
-          <ul className="space-y-1.5">
+        <Section title="Certifications & Professional Development">
+          <ul className="grid grid-cols-1 gap-x-8 gap-y-1 sm:grid-cols-2 print:grid-cols-2">
             {certifications.map((c) => (
               <li
                 key={`${c.name}-${c.issuer}-${c.date}`}
-                className="text-[14px] leading-relaxed text-neutral-800 print:text-[11px]"
+                className="flex items-baseline gap-2 text-[12.5px] print:text-[10px]"
               >
-                {c.url ? (
-                  <a
-                    href={c.url}
-                    className="font-semibold text-neutral-900 underline"
-                  >
-                    {c.name}
-                  </a>
-                ) : (
-                  <span className="font-semibold text-neutral-900">{c.name}</span>
-                )}
-                {' — '}
-                {c.issuer}
-                {c.date ? (
-                  <span className="text-neutral-500"> ({c.date})</span>
-                ) : null}
+                <span
+                  aria-hidden
+                  className="mt-[6px] h-[5px] w-[5px] shrink-0 rounded-full"
+                  style={{ backgroundColor: NAVY }}
+                />
+                <span>
+                  {c.url ? (
+                    <a
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold hover:underline"
+                      style={{ color: INK }}
+                    >
+                      {c.name}
+                    </a>
+                  ) : (
+                    <span className="font-semibold" style={{ color: INK }}>
+                      {c.name}
+                    </span>
+                  )}
+                  {c.date ? (
+                    <span style={{ color: '#6f6a59' }}> ({c.date})</span>
+                  ) : null}
+                </span>
               </li>
             ))}
           </ul>
@@ -258,24 +316,27 @@ export default function ResumePage() {
         {/* ---------------------------------------------------------------- */}
         {/* Skills                                                            */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Skills">
+        <Section title="Technical Expertise">
           <div className="space-y-1.5">
             {skills.map((group) => (
               <p
                 key={group.category}
-                className="text-[14px] leading-relaxed text-neutral-800 print:text-[11px]"
+                className="text-[12.5px] leading-relaxed print:text-[10px]"
               >
-                <span className="font-semibold text-neutral-900">
+                <span className="font-bold" style={{ color: NAVY }}>
                   {group.category}:{' '}
                 </span>
-                {group.skills.join(', ')}
+                <span style={{ color: INK }}>{group.skills.join(', ')}</span>
               </p>
             ))}
           </div>
         </Section>
 
-        <footer className="mt-8 border-t border-neutral-300 pt-3 text-center text-[11px] text-neutral-400 print:hidden">
-          {header.name}
+        <footer
+          className="mt-8 border-t pt-3 text-center text-[11px] print:hidden"
+          style={{ borderColor: '#DED8CA', color: '#8a8474' }}
+        >
+          {header.name} · {header.title}
         </footer>
       </main>
     </div>
