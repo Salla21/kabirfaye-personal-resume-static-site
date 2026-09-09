@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, FileText, Languages } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, FileText } from 'lucide-react';
 import type { Header as HeaderData } from '@/content/cv';
 import { ThemeToggle } from './ThemeToggle';
 
@@ -49,10 +49,6 @@ export function Header({ data }: Readonly<{ data: HeaderData }>) {
         >
           <FileText className="h-4 w-4" aria-hidden="true" />
           <span>PDF</span>
-        </a>
-        <a className="contact-btn" href="/de">
-          <Languages className="h-4 w-4" aria-hidden="true" />
-          <span>DE</span>
         </a>
         <ThemeToggle />
       </div>

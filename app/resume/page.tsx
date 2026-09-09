@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const NAVY = '#0B3D91'; // headings, name, rules, label lead-ins
 const NAVY_DEEP = '#082B66'; // name / strongest accent
 const INK = '#1A1A1A'; // body text (near-black for crisp print)
-const PAPER = '#F1EDE4'; // slightly darker, warmer off-white
+const PAPER = '#F7F4EE'; // light warm off-white (comfortable reading)
 
 /**
  * A bullet where a "Label: rest of sentence" is rendered with the label in
@@ -44,9 +44,10 @@ function ImpactBullet({ text }: Readonly<{ text: string }>) {
 function Section({
   title,
   children,
-}: Readonly<{ title: string; children: React.ReactNode }>) {
+  keepTogether = false,
+}: Readonly<{ title: string; children: React.ReactNode; keepTogether?: boolean }>) {
   return (
-    <section className="mt-7 print:mt-5">
+    <section className={`mt-7 print:mt-5${keepTogether ? ' break-inside-avoid' : ''}`}>
       <h2
         className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] break-after-avoid print:text-[11.5px]"
         style={{ color: NAVY, borderBottom: `2px solid ${NAVY}` }}
@@ -121,7 +122,7 @@ export default function ResumePage() {
     // Force a light, print-safe surface regardless of the site's dark theme.
     <div
       className="min-h-screen py-8 print:min-h-0 print:bg-white print:py-0"
-      style={{ backgroundColor: '#E9E4D8' }}
+      style={{ backgroundColor: '#EFEAE0' }}
     >
       {/* Non-printing hint bar */}
       <div className="no-print mx-auto mb-6 max-w-[820px] px-6">
@@ -272,7 +273,7 @@ export default function ResumePage() {
         {/* ---------------------------------------------------------------- */}
         {/* Certifications                                                    */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Certifications & Professional Development">
+        <Section title="Certifications & Professional Development" keepTogether>
           <ul className="grid grid-cols-1 gap-x-8 gap-y-1 sm:grid-cols-2 print:grid-cols-2">
             {certifications.map((c) => (
               <li
@@ -337,10 +338,22 @@ export default function ResumePage() {
         {/* ---------------------------------------------------------------- */}
         {header.languages.length > 0 ? (
           <Section title="Languages">
-            <p className="text-[13px] print:text-[10.5px]" style={{ color: INK }}>
-              {header.languages
-                .map((l) => `${l.name} (${l.level})`)
-                .join('  ·  ')}
+            <p className="flex flex-wrap items-center gap-x-2 text-[13px] print:text-[10.5px]">
+              {header.languages.map((l, i) => (
+                <span key={l.name} className="inline-flex items-center gap-x-2">
+                  {i > 0 ? (
+                    <span aria-hidden style={{ color: '#B9B2A2' }}>
+                      ·
+                    </span>
+                  ) : null}
+                  <span>
+                    <span className="font-bold" style={{ color: NAVY }}>
+                      {l.name}
+                    </span>{' '}
+                    <span style={{ color: INK }}>{l.level}</span>
+                  </span>
+                </span>
+              ))}
             </p>
           </Section>
         ) : null}

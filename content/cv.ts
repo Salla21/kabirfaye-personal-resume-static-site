@@ -100,7 +100,7 @@ export const cv: CV = {
     },
     languages: [
       { name: 'English', level: 'Fluent', percent: 95 },
-      { name: 'German', level: 'Advanced', percent: 80 },
+      { name: 'German', level: 'C1', percent: 80 },
     ],
   },
 

@@ -27,14 +27,10 @@ body {
   @apply border-slate-700 bg-slate-800/60 text-slate-200;
 }
 
-/* Section heading accent underline */
+/* Section heading with a full-width underline rule (consistent across all sections). */
 .section-heading {
-  @apply relative inline-block pb-2 text-lg font-semibold uppercase tracking-wide;
-}
-
-.section-heading::after {
-  content: '';
-  @apply absolute bottom-0 left-0 h-0.5 w-10 bg-accent;
+  @apply relative block w-full pb-2 text-lg font-semibold uppercase tracking-wide;
+  border-bottom: 2px solid theme('colors.accent.DEFAULT');
 }
 
 /* Contact button */
@@ -60,8 +56,17 @@ body {
   }
 }
 
-/* A4/Letter-friendly page margins for printed documents. */
+/* A4 page. Margins are applied by the PDF generator (single source of truth),
+   so keep @page margins at 0 to avoid doubling them in print/PDF. */
 @page {
   size: A4;
-  margin: 14mm;
+  margin: 0;
+}
+
+@media print {
+  /* Let the resume sheet use the full printable width. */
+  main {
+    max-width: none !important;
+    width: 100% !important;
+  }
 }
