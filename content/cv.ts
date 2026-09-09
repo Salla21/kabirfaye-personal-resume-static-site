@@ -301,7 +301,8 @@ export const cv: CV = {
     {
       name: 'AWS Certified AI Practitioner',
       issuer: 'Amazon Web Services',
-      date: 'In progress',
+      date: '2025',
+      url: 'https://www.credly.com/earner/earned/badge/d66eecdd-ce4a-40ab-b4c5-0562bf9c5997',
     },
     {
       name: 'HashiCorp Certified: Terraform Associate',

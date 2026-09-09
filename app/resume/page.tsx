@@ -250,36 +250,23 @@ export default function ResumePage() {
         </Section>
 
         {/* ---------------------------------------------------------------- */}
-        {/* Education                                                         */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Education">
-          <ul className="space-y-1">
-            {education.map((e) => (
-              <li
-                key={`${e.degree}-${e.institution}`}
-                className="text-[13px] print:text-[10.5px]"
+        {/* Technical Expertise (skills) — placed before Education            */}
+        {/* ---------------------------------------------------------------- */}
+        <Section title="Technical Expertise">
+          <div className="space-y-1.5">
+            {skills.map((group) => (
+              <p
+                key={group.category}
+                className="text-[12.5px] leading-relaxed print:text-[10px]"
               >
-                <span className="font-semibold" style={{ color: INK }}>
-                  {e.degree}
+                <span className="font-bold" style={{ color: NAVY }}>
+                  {group.category}:{' '}
                 </span>
-                {' — '}
-                {e.institution}
-                {e.dates ? (
-                  <span style={{ color: '#6f6a59' }}> | {e.dates}</span>
-                ) : null}
-              </li>
+                <span style={{ color: INK }}>{group.skills.join(', ')}</span>
+              </p>
             ))}
-          </ul>
-          {header.languages.length > 0 ? (
-            <p className="mt-2 text-[13px] print:text-[10.5px]">
-              <span className="font-semibold" style={{ color: NAVY }}>
-                Languages:{' '}
-              </span>
-              {header.languages
-                .map((l) => `${l.name} (${l.level})`)
-                .join(' · ')}
-            </p>
-          ) : null}
+          </div>
         </Section>
 
         {/* ---------------------------------------------------------------- */}
@@ -323,22 +310,36 @@ export default function ResumePage() {
         </Section>
 
         {/* ---------------------------------------------------------------- */}
-        {/* Skills                                                            */}
+        {/* Education                                                         */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Technical Expertise">
-          <div className="space-y-1.5">
-            {skills.map((group) => (
-              <p
-                key={group.category}
-                className="text-[12.5px] leading-relaxed print:text-[10px]"
+        <Section title="Education">
+          <ul className="space-y-1">
+            {education.map((e) => (
+              <li
+                key={`${e.degree}-${e.institution}`}
+                className="text-[13px] print:text-[10.5px]"
               >
-                <span className="font-bold" style={{ color: NAVY }}>
-                  {group.category}:{' '}
+                <span className="font-semibold" style={{ color: INK }}>
+                  {e.degree}
                 </span>
-                <span style={{ color: INK }}>{group.skills.join(', ')}</span>
-              </p>
+                {' — '}
+                {e.institution}
+                {e.dates ? (
+                  <span style={{ color: '#6f6a59' }}> | {e.dates}</span>
+                ) : null}
+              </li>
             ))}
-          </div>
+          </ul>
+          {header.languages.length > 0 ? (
+            <p className="mt-2 text-[13px] print:text-[10.5px]">
+              <span className="font-semibold" style={{ color: NAVY }}>
+                Languages:{' '}
+              </span>
+              {header.languages
+                .map((l) => `${l.name} (${l.level})`)
+                .join(' · ')}
+            </p>
+          ) : null}
         </Section>
 
         <footer
