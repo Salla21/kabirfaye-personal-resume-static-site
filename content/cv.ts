@@ -95,7 +95,7 @@ export const cv: CV = {
     contacts: {
       email: 'fayekabir21@yahoo.com',
       linkedin: 'https://www.linkedin.com/in/kabir-faye',
-      github: 'https://github.com/Salla21?tab=repositories',
+      github: 'https://github.com/Salla21/realworld-cicd-pipeline-project-1',
       pdf: '/files/Kabir-Faye-CV.pdf', // real generated PDF, opens in browser PDF viewer
     },
     languages: [
@@ -246,6 +246,21 @@ export const cv: CV = {
             'Secure Architecture: Implemented private subnets, bastion hosts, NAT Gateways, Security Groups, NACLs, WAF, Shield, encryption in transit and at rest, and Route 53 routing policies for secure AWS workloads',
             'CI/CD & Containers: Developed Docker-based deployments and maintained Jenkins, GitHub, GitLab CI, and Ansible automation workflows for consistent application delivery across environments',
             'Operations & Governance: Configured CloudWatch alarms, Lambda automation, AWS Organizations governance, disaster recovery architectures, failover testing, and operational troubleshooting for cloud-hosted applications',
+          ],
+        },
+      ],
+    },
+    {
+      company: 'Riders for Health (RFH), The Gambia',
+      dates: 'Jan 2008 - Dec 2012',
+      roles: [
+        {
+          title: 'Data Clerk',
+          dates: '',
+          tech: [],
+          results: [
+            'Recorded, entered, and maintained operational and program data supporting health-delivery logistics across field operations',
+            'Ensured data accuracy and consistency through validation, record-keeping, and routine reporting',
           ],
         },
       ],
@@ -428,6 +443,7 @@ export const cv: CV = {
         'Terragrunt',
         'CloudFormation',
         'Ansible',
+        'Makefile',
         'Systems Manager',
         'GitHub Actions',
         'GitLab CI',

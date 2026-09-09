@@ -145,7 +145,7 @@ export default function ResumePage() {
 
       {/* The document sheet */}
       <main
-        className="mx-auto max-w-[820px] px-10 py-10 font-sans text-[13.5px] leading-relaxed shadow-[0_10px_40px_rgba(11,61,145,0.12)] ring-1 print:max-w-none print:px-[10mm] print:py-0 print:text-[11px] print:leading-snug print:shadow-none print:ring-0"
+        className="mx-auto max-w-[820px] px-10 py-10 font-sans text-[13.5px] leading-relaxed shadow-[0_10px_40px_rgba(11,61,145,0.12)] ring-1 print:max-w-none print:px-[10mm] print:pb-[8mm] print:pt-0 print:text-[11px] print:leading-snug print:shadow-none print:ring-0"
         style={{ backgroundColor: PAPER, color: INK, ['--tw-ring-color' as string]: '#DED8CA' }}
       >
         {/* ---------------------------------------------------------------- */}
