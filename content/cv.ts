@@ -161,11 +161,8 @@ export const cv: CV = {
             'Enforced shift-left security in CI: gated Terraform validate/plan/apply behind automated scans using Trivy (IaC misconfiguration) and Deepfence (secret detection), with OIDC role assumption for short-lived AWS access and secured private module access',
             'Delivered the Metis AI platform — an event-driven AWS AI system using Bedrock, Textract, Transcribe, Translate, Comprehend, Cognito, ECS, Lambda, API Gateway, and SNS/SQS',
             'Managed Aviatrix multicloud networking across AWS and Azure — ActiveMesh, SmartGroups, Distributed Cloud Firewall, centralized egress',
-            'Drove observability with Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, GuardDuty, Security Hub — reducing MTTR by 25%',
-            'Grew and led a double-digit AWS engineering team through hiring cycles, onboarding, and talent development',
-            'Established mentoring programs and career frameworks that reduced attrition and built a promotion pipeline, ensuring project continuity across customer engagements',
-            'Led cross-functional knowledge transfer sessions across DACH and EMEA covering Agentic AI on Bedrock, local LLMs, CI/CD shift-left, and Forward Deployed Engineering',
-            'Defined and rolled out engineering standards (code review, IaC patterns, documentation) adopted across all delivery teams',
+            'Drove observability with Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, GuardDuty, and Security Hub — reducing MTTR by 25%',
+            'Grew and led a double-digit AWS engineering team across DACH and EMEA through hiring, onboarding, mentoring, and career frameworks, and defined engineering standards (code review, IaC patterns, documentation) adopted across all delivery teams',
           ],
           details:
             '<strong>PROJECT OVERVIEW</strong>Cloud migration of a centralized planning and monitoring platform from on-premises to AWS, plus delivery of the Metis AI platform, while leading the AWS engineering practice across DACH and EMEA.<strong>TEAM FOCUS</strong>Hands-on engineering lead for infrastructure, CI/CD, security, and observability, growing and managing a double-digit AWS engineering team through hiring, onboarding, mentoring, and career frameworks.<strong>ROLE FOCUS</strong>Owning the technical relationship across AWS compute, networking, AI/ML services, and multicloud (Aviatrix) while setting engineering standards and driving deployment automation, monitoring, and compliance.',
@@ -272,11 +269,6 @@ export const cv: CV = {
       institution: 'QuantumNet Institute of Technology',
       dates: '2011 - 2012',
     },
-    {
-      degree: 'Responsive Web Design Certification',
-      institution: 'freeCodeCamp',
-      dates: '2023',
-    },
   ],
 
   certifications: [
@@ -358,13 +350,13 @@ export const cv: CV = {
       date: '2023',
     },
     {
-      name: 'AI-Ready',
+      name: 'AI-Ready: Foundational',
       issuer: 'Rackspace Technology',
       date: 'Nov 2024',
       url: 'https://www.credly.com/badges/c5d85d9a-59ff-4620-9d27-5862b012a5e4/linked_in_profile',
     },
     {
-      name: 'AI-Ready',
+      name: 'AI-Ready: Practitioner',
       issuer: 'Rackspace Technology',
       date: 'Apr 2024',
       url: 'https://www.credly.com/badges/1e173024-7796-4e7a-9fad-0ece6aefaeb1/linked_in_profile',

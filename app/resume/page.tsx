@@ -330,17 +330,20 @@ export default function ResumePage() {
               </li>
             ))}
           </ul>
-          {header.languages.length > 0 ? (
-            <p className="mt-2 text-[13px] print:text-[10.5px]">
-              <span className="font-semibold" style={{ color: NAVY }}>
-                Languages:{' '}
-              </span>
+        </Section>
+
+        {/* ---------------------------------------------------------------- */}
+        {/* Languages                                                         */}
+        {/* ---------------------------------------------------------------- */}
+        {header.languages.length > 0 ? (
+          <Section title="Languages">
+            <p className="text-[13px] print:text-[10.5px]" style={{ color: INK }}>
               {header.languages
                 .map((l) => `${l.name} (${l.level})`)
-                .join(' · ')}
+                .join('  ·  ')}
             </p>
-          ) : null}
-        </Section>
+          </Section>
+        ) : null}
 
         <footer
           className="mt-8 border-t pt-3 text-center text-[11px] print:hidden"
