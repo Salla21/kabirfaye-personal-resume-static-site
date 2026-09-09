@@ -105,7 +105,7 @@ export const cv: CV = {
   },
 
   summary:
-    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years across DevOps, cloud architecture, networking, and programming. Led multi-million dollar cloud transformations across automotive and retail. Designing and delivering generative AI solutions, including multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Focused on building high-performing engineering teams and delivering measurable business outcomes.',
+    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years across DevOps, cloud architecture, networking, and programming. Led multi-million dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions — multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across DACH and EMEA.',
 
   impact: [
     {
@@ -157,11 +157,11 @@ export const cv: CV = {
           ],
           results: [
             'Led cloud migration of a centralized planning and monitoring platform from on-premises to AWS across ECS Fargate, Route 53, CloudFront, WAF, ALB/NLB, Secrets Manager, S3, KMS, and secure RDS/Aurora access',
-            'Owned CI/CD strategy and infrastructure automation using GitHub Actions, GitLab CI, Terraform, Terragrunt, Docker, Amazon ECR, and ECS — accelerating deployment velocity by 30%',
+            'Owned CI/CD strategy and infrastructure automation with GitHub Actions, GitLab CI, Terraform, Terragrunt, Docker, Amazon ECR, and ECS; deployment velocity rose 30%',
             'Enforced shift-left security in CI: gated Terraform validate/plan/apply behind automated scans using Trivy (IaC misconfiguration and secret scanning) and Deepfence (workload/runtime security), with OIDC role assumption for short-lived AWS access and secured private module access',
             'Delivered the Metis AI platform — an event-driven AWS AI system using Bedrock, Textract, Transcribe, Translate, Comprehend, Cognito, ECS, Lambda, API Gateway, and SNS/SQS',
             'Managed Aviatrix multicloud networking across AWS and Azure — ActiveMesh, SmartGroups, Distributed Cloud Firewall, centralized egress',
-            'Drove observability with Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, GuardDuty, and Security Hub — reducing MTTR by 25%',
+            'Built observability across Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, GuardDuty, and Security Hub, with automated runbooks and structured incident response; MTTR fell 25%',
             'Grew and led a double-digit AWS engineering team across DACH and EMEA through hiring, onboarding, mentoring, and career frameworks that reduced attrition and built a promotion pipeline',
             'Defined and rolled out engineering standards — code review, IaC patterns, and documentation — adopted across all delivery teams, and led knowledge transfer on Agentic AI (Bedrock), local LLMs, and CI/CD shift-left',
           ],
@@ -186,8 +186,8 @@ export const cv: CV = {
           ],
           results: [
             'Multi-Account AWS Foundations: Designed and scaled secure multi-account AWS environments using AWS Organizations, SCPs, Control Tower, centralized logging, and cross-account IAM roles across development, staging, and production workloads',
-            'Reusable Terraform Architecture: Authored reusable Terraform modules for VPC, ECS, RDS, IAM, ALB, security groups, and environment baselines — reducing new environment provisioning from days to under 2 hours and improving deployment consistency',
-            'CI/CD at Scale: Built and operated CI/CD pipelines using Jenkins, GitLab CI, GitHub, CodePipeline, CodeBuild, and CodeDeploy — increasing release frequency by 40% and reducing configuration drift from manual deployments',
+            'Reusable Terraform Architecture: Authored reusable Terraform modules for VPC, ECS, RDS, IAM, ALB, security groups, and environment baselines, cutting new environment provisioning from days to under 2 hours and improving deployment consistency',
+            'CI/CD at Scale: Built and operated CI/CD pipelines using Jenkins, GitLab CI, GitHub, CodePipeline, CodeBuild, and CodeDeploy; release frequency increased 40% and manual-deployment configuration drift dropped',
             'Network & Security Architecture: Architected hub-and-spoke VPC topologies with Transit Gateway, custom route tables, private subnet segmentation, security groups, and IAM least-privilege controls to reduce identity and lateral-movement risk',
             'Disaster Recovery & Resilience: Designed high-availability and multi-region disaster recovery architectures, automated failover testing, documented operational runbooks, and established RTO/RPO-driven recovery practices for critical workloads',
             'Database & Application Operations: Managed RDS, DynamoDB, database snapshots, read replicas, lifecycle policies, and performance tuning in collaboration with application engineering teams to improve reliability and response times',
@@ -215,7 +215,7 @@ export const cv: CV = {
             'Docker',
           ],
           results: [
-            'Migration Delivery: Led end-to-end AWS migration engagements for enterprise clients, producing Statements of Work, Proofs of Concept, architecture diagrams, and phased migration roadmaps — reducing time-to-cloud by an average of 35% compared with client self-managed estimates',
+            'Migration Delivery: Led end-to-end AWS migration engagements for enterprise clients, producing Statements of Work, Proofs of Concept, architecture diagrams, and phased migration roadmaps that cut time-to-cloud by an average of 35% against client self-managed estimates',
             'Architecture Design: Designed target-state AWS architectures covering networking, compute, storage, IAM, monitoring, and compliance controls, translating business requirements into documented technical solutions aligned to AWS Well-Architected best practices',
             'Cross-Functional Delivery: Partnered with client security, DevOps, and development teams to harden cloud infrastructure, deliver operational runbooks, and conduct stakeholder workshops supporting post-handoff self-operation',
             'Post-Deployment Support: Provided architecture reviews, troubleshooting guidance, technical documentation, and knowledge transfer to help client teams operate and scale AWS environments independently',
@@ -242,7 +242,7 @@ export const cv: CV = {
             'Ansible',
           ],
           results: [
-            'Legacy Migration: Migrated legacy applications from internal data centers to AWS — reducing infrastructure spend by 20%, improving application availability, and supporting enterprise cloud transformation initiatives',
+            'Legacy Migration: Migrated legacy applications from internal data centers to AWS, cutting infrastructure spend 20% while improving application availability and supporting enterprise cloud transformation initiatives',
             'Secure Architecture: Implemented private subnets, bastion hosts, NAT Gateways, Security Groups, NACLs, WAF, Shield, encryption in transit and at rest, and Route 53 routing policies for secure AWS workloads',
             'CI/CD & Containers: Developed Docker-based deployments and maintained Jenkins, GitHub, GitLab CI, and Ansible automation workflows for consistent application delivery across environments',
             'Operations & Governance: Configured CloudWatch alarms, Lambda automation, AWS Organizations governance, disaster recovery architectures, failover testing, and operational troubleshooting for cloud-hosted applications',
