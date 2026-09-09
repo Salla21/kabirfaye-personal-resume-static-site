@@ -96,7 +96,7 @@ export const cv: CV = {
       email: 'fayekabir21@yahoo.com',
       linkedin: 'https://www.linkedin.com/in/kabir-faye',
       github: 'https://github.com/Salla21?tab=repositories',
-      pdf: '/resume/', // printable page opened in a new tab (trailingSlash: true)
+      pdf: '/files/Kabir-Faye-CV.pdf', // real generated PDF, opens in browser PDF viewer
     },
     languages: [
       { name: 'English', level: 'Fluent', percent: 95 },
