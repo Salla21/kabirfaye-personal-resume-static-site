@@ -106,7 +106,7 @@ async function main() {
       path: pdfPath,
       format: 'A4',
       printBackground: true,
-      margin: { top: '18mm', bottom: '18mm', left: '22mm', right: '22mm' },
+      margin: { top: '14mm', bottom: '14mm', left: '10mm', right: '10mm' },
     });
     console.log(`PDF written: ${pdfPath}`);
   } finally {

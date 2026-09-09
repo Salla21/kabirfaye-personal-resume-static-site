@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 // ---------------------------------------------------------------------------
 // Design system (blue / white / black, print-safe)
 // ---------------------------------------------------------------------------
-const NAVY = '#000000'; // headings, rules, label lead-ins (black, ATS-plain like reference)
-const NAVY_DEEP = '#000000'; // name
+const NAVY = '#0B3D91'; // headings, name, rules, label lead-ins
+const NAVY_DEEP = '#082B66'; // name / strongest accent
 const INK = '#1A1A1A'; // body text (near-black for crisp print)
-const PAPER = '#FFFFFF'; // white paper, matching the reference
+const PAPER = '#F7F4EE'; // light warm off-white (comfortable reading)
 
 /**
  * A bullet where a "Label: rest of sentence" is rendered with the label in
@@ -122,7 +122,7 @@ export default function ResumePage() {
     // Force a light, print-safe surface regardless of the site's dark theme.
     <div
       className="min-h-screen py-8 print:min-h-0 print:bg-white print:py-0"
-      style={{ backgroundColor: '#EAEAEA' }}
+      style={{ backgroundColor: '#EFEAE0' }}
     >
       {/* Non-printing hint bar */}
       <div className="no-print mx-auto mb-6 max-w-[820px] px-6">
@@ -145,7 +145,7 @@ export default function ResumePage() {
 
       {/* The document sheet */}
       <main
-        className="mx-auto max-w-[820px] px-10 py-10 font-sans text-[13.5px] leading-relaxed shadow-[0_10px_40px_rgba(11,61,145,0.12)] ring-1 print:max-w-none print:px-0 print:py-0 print:text-[11px] print:leading-snug print:shadow-none print:ring-0"
+        className="mx-auto max-w-[820px] px-10 py-10 font-sans text-[13.5px] leading-relaxed shadow-[0_10px_40px_rgba(11,61,145,0.12)] ring-1 print:max-w-none print:px-[10mm] print:py-0 print:text-[11px] print:leading-snug print:shadow-none print:ring-0"
         style={{ backgroundColor: PAPER, color: INK, ['--tw-ring-color' as string]: '#DED8CA' }}
       >
         {/* ---------------------------------------------------------------- */}

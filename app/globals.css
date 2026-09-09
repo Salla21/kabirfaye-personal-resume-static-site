@@ -63,10 +63,4 @@ body {
   margin: 0;
 }
 
-@media print {
-  /* Let the resume sheet use the full printable width. */
-  main {
-    max-width: none !important;
-    width: 100% !important;
-  }
-}
+
