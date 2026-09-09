@@ -141,30 +141,9 @@ export const cv: CV = {
       location: 'Munich, Germany / Remote',
       roles: [
         {
-          title: 'Professional Services Delivery Engineer',
-          dates: 'Nov 2025 - Present',
-          project: 'AWS Engineering Practice',
-          tech: [
-            'Team Leadership',
-            'AWS Bedrock',
-            'Agentic AI',
-            'CI/CD',
-            'IaC',
-            'Terraform',
-          ],
-          results: [
-            'Grew and led a double-digit AWS engineering team through hiring cycles, onboarding, and talent development',
-            'Established mentoring programs and career frameworks that reduced attrition and built a promotion pipeline, ensuring project continuity across customer engagements',
-            'Led cross-functional knowledge transfer sessions across DACH and EMEA covering Agentic AI on Bedrock, local LLMs, CI/CD shift-left, and Forward Deployed Engineering',
-            'Defined and rolled out engineering standards (code review, IaC patterns, documentation) adopted across all delivery teams',
-          ],
-          details:
-            '<strong>PROJECT OVERVIEW</strong>Leading the AWS engineering practice across DACH and EMEA — owning technical strategy, hiring, team development, and delivery quality across enterprise customer engagements.<strong>TEAM FOCUS</strong>Growing and managing a double-digit AWS engineering team through hiring cycles, onboarding, structured mentoring programs, and career frameworks that reduce attrition and build a promotion pipeline.<strong>ROLE FOCUS</strong>Balancing hands-on architecture with engineering leadership — setting standards for code review, IaC patterns, and documentation while driving cross-functional knowledge transfer on Agentic AI, local LLMs, CI/CD shift-left, and Forward Deployed Engineering.',
-        },
-        {
-          title: 'Senior DevOps Engineer',
-          dates: 'Mar 2024 - Nov 2025',
-          project: 'Enterprise Cloud Platform Migration',
+          title: 'Senior DevOps Engineer / Professional Services Delivery Engineer',
+          dates: '',
+          project: 'Enterprise Cloud Platform Migration & AWS Engineering Practice',
           tech: [
             'AWS ECS Fargate',
             'Terraform',
@@ -183,9 +162,13 @@ export const cv: CV = {
             'Delivered the Metis AI platform — an event-driven AWS AI system using Bedrock, Textract, Transcribe, Translate, Comprehend, Cognito, ECS, Lambda, API Gateway, and SNS/SQS',
             'Managed Aviatrix multicloud networking across AWS and Azure — ActiveMesh, SmartGroups, Distributed Cloud Firewall, centralized egress',
             'Drove observability with Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, GuardDuty, Security Hub — reducing MTTR by 25%',
+            'Grew and led a double-digit AWS engineering team through hiring cycles, onboarding, and talent development',
+            'Established mentoring programs and career frameworks that reduced attrition and built a promotion pipeline, ensuring project continuity across customer engagements',
+            'Led cross-functional knowledge transfer sessions across DACH and EMEA covering Agentic AI on Bedrock, local LLMs, CI/CD shift-left, and Forward Deployed Engineering',
+            'Defined and rolled out engineering standards (code review, IaC patterns, documentation) adopted across all delivery teams',
           ],
           details:
-            '<strong>PROJECT OVERVIEW</strong>Cloud migration of a centralized planning and monitoring platform from on-premises to AWS, plus delivery of the Metis AI platform for customer communication processing.<strong>TEAM FOCUS</strong>Hands-on engineering lead for infrastructure, CI/CD, security, and observability — collaborating across platform, application, and security teams to deliver production-ready AWS workloads.<strong>ROLE FOCUS</strong>Owning the technical relationship across AWS compute, networking, AI/ML services, and multicloud (Aviatrix) — making architecture decisions and driving deployment automation, monitoring, and compliance.',
+            '<strong>PROJECT OVERVIEW</strong>Cloud migration of a centralized planning and monitoring platform from on-premises to AWS, plus delivery of the Metis AI platform, while leading the AWS engineering practice across DACH and EMEA.<strong>TEAM FOCUS</strong>Hands-on engineering lead for infrastructure, CI/CD, security, and observability, growing and managing a double-digit AWS engineering team through hiring, onboarding, mentoring, and career frameworks.<strong>ROLE FOCUS</strong>Owning the technical relationship across AWS compute, networking, AI/ML services, and multicloud (Aviatrix) while setting engineering standards and driving deployment automation, monitoring, and compliance.',
         },
       ],
     },

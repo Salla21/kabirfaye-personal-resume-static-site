@@ -202,18 +202,26 @@ export default function ResumePage() {
           <div className="space-y-4">
             {experience.map((exp) => (
               <article key={exp.company} className="break-inside-avoid">
-                {exp.roles.map((role, ri) => (
+                {exp.roles.map((role, ri) => {
+                  const titles = role.title.split('/').map((t) => t.trim());
+                  return (
                   <div
                     key={role.title}
                     className={ri > 0 ? 'mt-3 break-inside-avoid' : 'break-inside-avoid'}
                   >
                     <div className="flex items-baseline justify-between gap-4">
                       <h3
-                        className="text-[14px] font-bold print:text-[11.5px]"
+                        className="text-[14px] font-bold leading-snug print:text-[11.5px]"
                         style={{ color: NAVY }}
                       >
-                        {role.title}
-                        <span style={{ color: INK }}> | {exp.company}</span>
+                        {titles.map((t, ti) => (
+                          <span key={t} className="block">
+                            {t}
+                            {ti === titles.length - 1 ? (
+                              <span style={{ color: INK }}> | {exp.company}</span>
+                            ) : null}
+                          </span>
+                        ))}
                       </h3>
                       <span
                         className="shrink-0 text-[12px] font-semibold print:text-[10.5px]"
@@ -234,7 +242,8 @@ export default function ResumePage() {
                       </ul>
                     ) : null}
                   </div>
-                ))}
+                  );
+                })}
               </article>
             ))}
           </div>
