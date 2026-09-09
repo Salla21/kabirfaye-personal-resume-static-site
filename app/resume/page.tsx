@@ -46,9 +46,9 @@ function Section({
   children,
 }: Readonly<{ title: string; children: React.ReactNode }>) {
   return (
-    <section className="mt-7 break-inside-avoid print:mt-5">
+    <section className="mt-7 print:mt-5">
       <h2
-        className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] print:text-[11.5px]"
+        className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] break-after-avoid print:text-[11.5px]"
         style={{ color: NAVY, borderBottom: `2px solid ${NAVY}` }}
       >
         {title}
@@ -201,15 +201,15 @@ export default function ResumePage() {
         <Section title="Professional Experience">
           <div className="space-y-4">
             {experience.map((exp) => (
-              <article key={exp.company} className="break-inside-avoid">
+              <article key={exp.company}>
                 {exp.roles.map((role, ri) => {
                   const titles = role.title.split('/').map((t) => t.trim());
                   return (
                   <div
                     key={role.title}
-                    className={ri > 0 ? 'mt-3 break-inside-avoid' : 'break-inside-avoid'}
+                    className={ri > 0 ? 'mt-3' : ''}
                   >
-                    <div className="flex items-baseline justify-between gap-4">
+                    <div className="flex items-baseline justify-between gap-4 break-after-avoid">
                       <h3
                         className="text-[14px] font-bold leading-snug print:text-[11.5px]"
                         style={{ color: NAVY }}
