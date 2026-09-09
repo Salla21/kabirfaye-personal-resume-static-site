@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 // ---------------------------------------------------------------------------
 // Design system (blue / white / black, print-safe)
 // ---------------------------------------------------------------------------
-const NAVY = '#0B3D91'; // headings, name, rules, label lead-ins
-const NAVY_DEEP = '#082B66'; // name / strongest accent
+const NAVY = '#000000'; // headings, rules, label lead-ins (black, ATS-plain like reference)
+const NAVY_DEEP = '#000000'; // name
 const INK = '#1A1A1A'; // body text (near-black for crisp print)
-const PAPER = '#F7F4EE'; // light warm off-white (comfortable reading)
+const PAPER = '#FFFFFF'; // white paper, matching the reference
 
 /**
  * A bullet where a "Label: rest of sentence" is rendered with the label in
@@ -122,7 +122,7 @@ export default function ResumePage() {
     // Force a light, print-safe surface regardless of the site's dark theme.
     <div
       className="min-h-screen py-8 print:min-h-0 print:bg-white print:py-0"
-      style={{ backgroundColor: '#EFEAE0' }}
+      style={{ backgroundColor: '#EAEAEA' }}
     >
       {/* Non-printing hint bar */}
       <div className="no-print mx-auto mb-6 max-w-[820px] px-6">
