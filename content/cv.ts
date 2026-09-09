@@ -105,7 +105,7 @@ export const cv: CV = {
   },
 
   summary:
-    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years across DevOps, cloud architecture, networking, and programming. Led multi-million dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across DACH and EMEA.',
+    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years across technology and data operations, including 9+ years in AWS cloud and DevOps, cloud architecture, networking, and programming. Led multi-million dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across DACH and EMEA.',
 
   impact: [
     {
@@ -252,23 +252,16 @@ export const cv: CV = {
     },
     {
       company: 'Riders for Health (RFH), The Gambia',
-      dates: 'Jan 2008 - Dec 2012',
+      dates: 'Feb 2011 - Feb 2014',
       roles: [
         {
           title: 'Data Processing Clerk',
           dates: '',
           tech: [],
           results: [
-            'Helped turn daily operational records into accurate, organised and useful information, supporting reporting, planning and informed decision-making',
-            'Inaccurate or incomplete data: Checked records for errors, missing details and inconsistencies, helping ensure information is reliable before it is used in reports',
-            'Scattered paperwork: Entered and organised information from paper forms and other sources into structured electronic records, making it easier to find and update',
-            'Duplicate and inconsistent records: Identified repeated entries and standardised formats to improve data quality and prevent misleading totals',
-            'Reporting delays: Processed incoming records and prepared summaries on time, helping colleagues access the information they need',
-            'Unresolved discrepancies: Compared entries with source documents and followed up with relevant colleagues to clarify missing or conflicting information',
-            'Limited visibility into daily activities: Consolidated operational data into clear summaries that help teams monitor progress and identify gaps requiring attention',
-            'Difficulty retrieving historical information: Maintained organised files and records to support enquiries, reporting and document reviews',
-            'Sensitive information handling: Handled confidential records carefully and followed organisational procedures for data access and storage',
-            'Focused on accuracy, attention to detail and timely processing, helping the team spend less time correcting records and more time acting on reliable information',
+            'Maintained accurate operational records by validating, standardising and digitising data',
+            'Resolved missing, duplicate and inconsistent records through source-document verification',
+            'Produced timely operational summaries supporting reporting and planning',
           ],
         },
       ],
@@ -367,11 +360,6 @@ export const cv: CV = {
       url: 'https://www.linkedin.com/learning/certificates/2ec3816014e5dc6110982df703ebfec583204a34be790153383d851259c09716',
     },
     {
-      name: 'Responsive Web Design',
-      issuer: 'FreeCodeCamp',
-      date: '2023',
-    },
-    {
       name: 'AI-Ready: Foundational',
       issuer: 'Rackspace Technology',
       date: 'Nov 2024',
@@ -382,6 +370,11 @@ export const cv: CV = {
       issuer: 'Rackspace Technology',
       date: 'Apr 2024',
       url: 'https://www.credly.com/badges/1e173024-7796-4e7a-9fad-0ece6aefaeb1/linked_in_profile',
+    },
+    {
+      name: 'Responsive Web Design',
+      issuer: 'FreeCodeCamp',
+      date: '2023',
     },
   ],
 
