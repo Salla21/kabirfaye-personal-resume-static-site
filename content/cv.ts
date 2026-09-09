@@ -255,12 +255,19 @@ export const cv: CV = {
       dates: 'Jan 2008 - Dec 2012',
       roles: [
         {
-          title: 'Data Clerk',
+          title: 'Data Processing Clerk',
           dates: '',
           tech: [],
           results: [
-            'Recorded, entered, and maintained operational and program data supporting health-delivery logistics across field operations',
-            'Ensured data accuracy and consistency through validation, record-keeping, and routine reporting',
+            'Turned daily operational records into accurate, organised information supporting reporting, planning, and informed decision-making',
+            'Data quality: Checked records for errors, missing details, and inconsistencies to ensure information was reliable before use in reports',
+            'Digitisation: Entered and organised information from paper forms into structured electronic records, making it easier to find and update',
+            'Deduplication: Identified repeated entries and standardised formats to improve data quality and prevent misleading totals',
+            'Timely reporting: Processed incoming records and prepared summaries on time so colleagues could access the information they needed',
+            'Discrepancy resolution: Compared entries against source documents and followed up with colleagues to clarify missing or conflicting information',
+            'Operational visibility: Consolidated operational data into clear summaries that helped teams monitor progress and identify gaps',
+            'Records management: Maintained organised files to support enquiries, reporting, and document reviews',
+            'Confidentiality: Handled sensitive records carefully, following organisational procedures for data access and storage',
           ],
         },
       ],
@@ -414,7 +421,7 @@ export const cv: CV = {
         'Rekognition',
         'Amazon Q',
         'SageMaker',
-        'AWS Kiro',
+        'Kiro IDE',
         'Model Context Protocol (MCP)',
         'Agentic AI',
         'Claude Code',
@@ -476,7 +483,7 @@ export const cv: CV = {
       ],
     },
     {
-      category: 'Security & Observability',
+      category: 'Security, Compliance & Observability',
       skills: [
         'IAM',
         'Cognito',
