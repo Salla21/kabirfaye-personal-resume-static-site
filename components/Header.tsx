@@ -1,8 +1,18 @@
-import { Github, Linkedin, Mail, MapPin, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, FileText, Languages } from 'lucide-react';
 import type { Header as HeaderData } from '@/content/cv';
 import { ThemeToggle } from './ThemeToggle';
 
-export function Header({ data }: Readonly<{ data: HeaderData }>) {
+export function Header({
+  data,
+  titleOverride,
+  langSwitchHref,
+  langSwitchLabel,
+}: Readonly<{
+  data: HeaderData;
+  titleOverride?: string;
+  langSwitchHref?: string;
+  langSwitchLabel?: string;
+}>) {
   const { name, title, location, contacts, languages } = data;
 
   return (
@@ -11,7 +21,9 @@ export function Header({ data }: Readonly<{ data: HeaderData }>) {
         {name}
       </h1>
 
-      <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">{title}</p>
+      <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">
+        {titleOverride ?? title}
+      </p>
 
       <div className="mt-3 flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400">
         <MapPin className="h-4 w-4 text-accent" aria-hidden="true" />
@@ -50,6 +62,12 @@ export function Header({ data }: Readonly<{ data: HeaderData }>) {
           <FileText className="h-4 w-4" aria-hidden="true" />
           <span>PDF</span>
         </a>
+        {langSwitchHref ? (
+          <a className="contact-btn" href={langSwitchHref}>
+            <Languages className="h-4 w-4" aria-hidden="true" />
+            <span>{langSwitchLabel}</span>
+          </a>
+        ) : null}
         <ThemeToggle />
       </div>
 

@@ -530,3 +530,29 @@ export const cv: CV = {
     },
   ],
 };
+
+// ---------------------------------------------------------------------------
+// GERMAN (DE) OVERLAY — translated human-readable strings only.
+// Technical bullets, tool names, and proper nouns stay as-is (standard practice).
+// ---------------------------------------------------------------------------
+export const de = {
+  title: 'Cloud Solutions Architect | Head of Engineering',
+  summary:
+    'Cloud Solutions Architect und Head of AWS Engineering mit über 12 Jahren Erfahrung in DevOps, Cloud-Architektur, Netzwerken und Programmierung. Leitung millionenschwerer Cloud-Transformationen in der Automobil- und Handelsbranche. Konzeption und Umsetzung generativer KI-Lösungen wie Multi-Agenten-Architekturen, RAG-Pipelines und KI/ML-Integrationen in Unternehmenssysteme. Zertifiziert auf Professional- und Specialty-Niveau bei AWS und Aviatrix Multicloud-Networking. Aufbau und Mentoring von AWS-Engineering-Teams in der DACH-Region und EMEA.',
+  sections: {
+    summary: 'Zusammenfassung',
+    experience: 'Berufserfahrung',
+    skills: 'Technische Kompetenzen',
+    certifications: 'Zertifizierungen & Weiterbildung',
+    education: 'Ausbildung',
+    languages: 'Sprachen',
+  },
+  languageLevels: {
+    English: 'Englisch (fließend)',
+    German: 'Deutsch (C1)',
+  } as Record<string, string>,
+  ui: {
+    savePdf: 'Zum Speichern als PDF Strg/Cmd + P drücken.',
+    meta: 'A4 · einspaltig · ATS-freundlich',
+  },
+};

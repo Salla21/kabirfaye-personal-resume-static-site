@@ -10,7 +10,7 @@ import { Impact } from '@/components/Impact';
 export default function Page() {
   return (
     <main className="mx-auto max-w-content px-5 py-12 sm:px-8 sm:py-16">
-      <Header data={cv.header} />
+      <Header data={cv.header} langSwitchHref="/de/" langSwitchLabel="DE" />
 
       <Section id="summary" title="Summary">
         <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
