@@ -165,8 +165,6 @@ export const cv: CV = {
             'Grew and led a double-digit AWS engineering team across DACH and EMEA through hiring, onboarding, mentoring, and career frameworks that reduced attrition and built a promotion pipeline',
             'Defined and rolled out engineering standards — code review, IaC patterns, and documentation — adopted across all delivery teams, and led knowledge transfer on Agentic AI (Bedrock), local LLMs, and CI/CD shift-left',
           ],
-          details:
-            '<strong>PROJECT OVERVIEW</strong>Cloud migration of a centralized planning and monitoring platform from on-premises to AWS, plus delivery of the Metis AI platform, while leading the AWS engineering practice across DACH and EMEA.<strong>TEAM FOCUS</strong>Hands-on engineering lead for infrastructure, CI/CD, security, and observability, growing and managing a double-digit AWS engineering team through hiring, onboarding, mentoring, and career frameworks.<strong>ROLE FOCUS</strong>Owning the technical relationship across AWS compute, networking, AI/ML services, and multicloud (Aviatrix) while setting engineering standards and driving deployment automation, monitoring, and compliance.',
         },
       ],
     },
