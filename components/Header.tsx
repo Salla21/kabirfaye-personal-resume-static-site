@@ -43,7 +43,7 @@ export function Header({ data }: Readonly<{ data: HeaderData }>) {
         </a>
         <a
           className="contact-btn"
-          href={contacts.pdf || '/resume'}
+          href={contacts.pdf || '/resume/'}
           target="_blank"
           rel="noopener noreferrer"
         >
