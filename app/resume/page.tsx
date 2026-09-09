@@ -49,7 +49,7 @@ function Section({
   return (
     <section className={`mt-7 print:mt-5${keepTogether ? ' break-inside-avoid' : ''}`}>
       <h2
-        className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] break-after-avoid print:text-[11.5px]"
+        className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] break-after-avoid print:text-[13px]"
         style={{ color: NAVY, borderBottom: `2px solid ${NAVY}` }}
       >
         {title}
@@ -145,7 +145,7 @@ export default function ResumePage() {
 
       {/* The document sheet */}
       <main
-        className="mx-auto max-w-[820px] px-10 py-10 font-sans text-[13.5px] leading-relaxed shadow-[0_10px_40px_rgba(11,61,145,0.12)] ring-1 print:max-w-none print:px-[10mm] print:pb-[8mm] print:pt-0 print:text-[11px] print:leading-snug print:shadow-none print:ring-0"
+        className="mx-auto max-w-[820px] px-10 py-10 font-sans text-[13.5px] leading-relaxed shadow-[0_10px_40px_rgba(11,61,145,0.12)] ring-1 print:max-w-none print:px-[10mm] print:pb-[8mm] print:pt-0 print:text-[12.5px] print:leading-relaxed print:shadow-none print:ring-0"
         style={{ backgroundColor: PAPER, color: INK, ['--tw-ring-color' as string]: '#DED8CA' }}
       >
         {/* ---------------------------------------------------------------- */}
@@ -166,7 +166,7 @@ export default function ResumePage() {
           </p>
 
           {contactParts.length > 0 ? (
-            <p className="mt-2.5 flex flex-wrap items-center justify-center gap-x-2 text-[12.5px] print:text-[10.5px]">
+            <p className="mt-2.5 flex flex-wrap items-center justify-center gap-x-2 text-[12.5px] print:text-[12px]">
               {contactParts.map((part, i) => (
                 <span
                   key={part.id}
@@ -212,7 +212,7 @@ export default function ResumePage() {
                   >
                     <div className="flex items-baseline justify-between gap-4 break-after-avoid">
                       <h3
-                        className="text-[14px] font-bold leading-snug print:text-[11.5px]"
+                        className="text-[14px] font-bold leading-snug print:text-[13px]"
                         style={{ color: NAVY }}
                       >
                         {titles.map((t, ti) => (
@@ -225,7 +225,7 @@ export default function ResumePage() {
                         ))}
                       </h3>
                       <span
-                        className="shrink-0 text-[12px] font-semibold print:text-[10.5px]"
+                        className="shrink-0 text-[12px] font-semibold print:text-[12px]"
                         style={{ color: '#55503f' }}
                       >
                         {role.dates || exp.dates}
@@ -234,7 +234,7 @@ export default function ResumePage() {
 
                     {role.results.length > 0 ? (
                       <ul
-                        className="mt-1.5 list-disc space-y-1 pl-5 text-[13px] print:text-[10.5px]"
+                        className="mt-1.5 list-disc space-y-1 pl-5 text-[14px] print:text-[12.5px]"
                         style={{ color: INK }}
                       >
                         {role.results.map((r) => (
@@ -259,7 +259,7 @@ export default function ResumePage() {
             {skills.map((group) => (
               <p
                 key={group.category}
-                className="text-[12.5px] leading-relaxed print:text-[10px]"
+                className="text-[12.5px] leading-relaxed print:text-[11.5px]"
               >
                 <span className="font-bold" style={{ color: NAVY }}>
                   {group.category}:{' '}
@@ -278,7 +278,7 @@ export default function ResumePage() {
             {certifications.map((c) => (
               <li
                 key={`${c.name}-${c.issuer}-${c.date}`}
-                className="flex items-baseline gap-2 text-[12.5px] print:text-[10px]"
+                className="flex items-baseline gap-2 text-[13.5px] print:text-[11.5px]"
               >
                 <span
                   aria-hidden
@@ -318,7 +318,7 @@ export default function ResumePage() {
             {education.map((e) => (
               <li
                 key={`${e.degree}-${e.institution}`}
-                className="text-[13px] print:text-[10.5px]"
+                className="text-[14px] print:text-[12.5px]"
               >
                 <span className="font-semibold" style={{ color: INK }}>
                   {e.degree}
@@ -338,7 +338,7 @@ export default function ResumePage() {
         {/* ---------------------------------------------------------------- */}
         {header.languages.length > 0 ? (
           <Section title="Languages">
-            <p className="flex flex-wrap items-center gap-x-2 text-[13px] print:text-[10.5px]">
+            <p className="flex flex-wrap items-center gap-x-2 text-[14px] print:text-[12.5px]">
               {header.languages.map((l, i) => (
                 <span key={l.name} className="inline-flex items-center gap-x-2">
                   {i > 0 ? (
