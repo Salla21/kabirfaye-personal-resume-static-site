@@ -1,12 +1,12 @@
 // ---------------------------------------------------------------------------
-// CV CONTENT — edit this file to update the website.
+// CV CONTENT - edit this file to update the website.
 // Everything the site renders comes from here. No need to touch components.
 // ---------------------------------------------------------------------------
 
 export interface LanguageProficiency {
   name: string;
   level: string; // e.g. "Fluent", "Intermediate"
-  /** 0–100 for the proficiency bar */
+  /** 0-100 for the proficiency bar */
   percent: number;
 }
 
@@ -105,7 +105,7 @@ export const cv: CV = {
   },
 
   summary:
-    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years across DevOps, cloud architecture, networking, and programming. Led multi-million dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions — multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across DACH and EMEA.',
+    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years across DevOps, cloud architecture, networking, and programming. Led multi-million dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across DACH and EMEA.',
 
   impact: [
     {
@@ -159,11 +159,11 @@ export const cv: CV = {
             'Led cloud migration of a centralized planning and monitoring platform from on-premises to AWS across ECS Fargate, Route 53, CloudFront, WAF, ALB/NLB, Secrets Manager, S3, KMS, and secure RDS/Aurora access',
             'Owned CI/CD strategy and infrastructure automation with GitHub Actions, GitLab CI, Terraform, Terragrunt, Docker, Amazon ECR, and ECS; deployment velocity rose 30%',
             'Enforced shift-left security in CI: gated Terraform validate/plan/apply behind automated scans using Trivy (IaC misconfiguration and secret scanning) and Deepfence (workload/runtime security), with OIDC role assumption for short-lived AWS access and secured private module access',
-            'Delivered the Metis AI platform — an event-driven AWS AI system using Bedrock, Textract, Transcribe, Translate, Comprehend, Cognito, ECS, Lambda, API Gateway, and SNS/SQS',
-            'Managed Aviatrix multicloud networking across AWS and Azure — ActiveMesh, SmartGroups, Distributed Cloud Firewall, centralized egress',
+            'Delivered the Metis AI platform, an event-driven AWS AI system using Bedrock, Textract, Transcribe, Translate, Comprehend, Cognito, ECS, Lambda, API Gateway, and SNS/SQS',
+            'Managed Aviatrix multicloud networking across AWS and Azure, including ActiveMesh, SmartGroups, Distributed Cloud Firewall, and centralized egress',
             'Built observability across Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, GuardDuty, and Security Hub, with automated runbooks and structured incident response; MTTR fell 25%',
             'Grew and led a double-digit AWS engineering team across DACH and EMEA through hiring, onboarding, mentoring, and career frameworks that reduced attrition and built a promotion pipeline',
-            'Defined and rolled out engineering standards — code review, IaC patterns, and documentation — adopted across all delivery teams, and led knowledge transfer on Agentic AI (Bedrock), local LLMs, and CI/CD shift-left',
+            'Defined and rolled out engineering standards (code review, IaC patterns, and documentation) adopted across all delivery teams, and led knowledge transfer on Agentic AI (Bedrock), local LLMs, and CI/CD shift-left',
           ],
         },
       ],
@@ -272,19 +272,19 @@ export const cv: CV = {
 
   certifications: [
     {
-      name: 'AWS Certified Security – Specialty',
+      name: 'AWS Certified Security - Specialty',
       issuer: 'Amazon Web Services',
       date: 'Jun 2025',
       url: 'https://www.credly.com/users/kabir-faye',
     },
     {
-      name: 'AWS Certified DevOps Engineer – Professional',
+      name: 'AWS Certified DevOps Engineer - Professional',
       issuer: 'Amazon Web Services',
       date: 'Apr 2025',
       url: 'https://www.credly.com/users/kabir-faye',
     },
     {
-      name: 'AWS Certified Solutions Architect – Associate',
+      name: 'AWS Certified Solutions Architect - Associate',
       issuer: 'Amazon Web Services',
       date: 'May 2024',
       url: 'https://www.credly.com/users/kabir-faye',

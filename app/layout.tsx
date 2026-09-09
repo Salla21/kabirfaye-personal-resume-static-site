@@ -3,11 +3,11 @@ import { cv } from '@/content/cv';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: `${cv.header.name} — CV`,
-  description: `${cv.header.name} — ${cv.header.title}. ${cv.header.location}.`,
+  title: `${cv.header.name} - CV`,
+  description: `${cv.header.name} - ${cv.header.title}. ${cv.header.location}.`,
   authors: [{ name: cv.header.name }],
   openGraph: {
-    title: `${cv.header.name} — CV`,
+    title: `${cv.header.name} - CV`,
     description: cv.header.title,
     type: 'profile',
   },

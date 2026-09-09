@@ -64,7 +64,7 @@ export function Header({ data }: Readonly<{ data: HeaderData }>) {
               <span className="font-medium text-slate-700 dark:text-slate-200">
                 {lang.name}
               </span>
-              <span className="text-slate-400 dark:text-slate-500">—</span>
+              <span className="text-slate-400 dark:text-slate-500">:</span>
               <span className="text-slate-500 dark:text-slate-400">
                 {lang.level}
               </span>

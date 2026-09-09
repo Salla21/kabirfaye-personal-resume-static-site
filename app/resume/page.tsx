@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { cv } from '@/content/cv';
 
 export const metadata: Metadata = {
-  title: `${cv.header.name} — Resume`,
-  description: `${cv.header.name} — ${cv.header.title}. Printable, ATS-optimized resume.`,
+  title: `${cv.header.name} - Resume`,
+  description: `${cv.header.name} - ${cv.header.title}. Printable, ATS-optimized resume.`,
 };
 
 // ---------------------------------------------------------------------------
@@ -251,7 +251,7 @@ export default function ResumePage() {
 
         {/* ---------------------------------------------------------------- */}
         {/* ---------------------------------------------------------------- */}
-        {/* Technical Expertise (skills) — placed before Education            */}
+        {/* Technical Expertise (skills): placed before Education */}
         {/* ---------------------------------------------------------------- */}
         <Section title="Technical Expertise">
           <div className="space-y-1.5">
@@ -322,7 +322,7 @@ export default function ResumePage() {
                 <span className="font-semibold" style={{ color: INK }}>
                   {e.degree}
                 </span>
-                {' — '}
+                {', '}
                 {e.institution}
                 {e.dates ? (
                   <span style={{ color: '#6f6a59' }}> | {e.dates}</span>
