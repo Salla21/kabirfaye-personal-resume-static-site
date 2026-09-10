@@ -26,7 +26,7 @@ function ImpactBullet({ text }: Readonly<{ text: string }>) {
     const label = text.slice(0, idx);
     const rest = text.slice(idx + 1).trim();
     return (
-      <li className="leading-relaxed">
+      <li className="leading-relaxed break-inside-avoid">
         <span className="font-bold" style={{ color: NAVY }}>
           {label}:
         </span>{' '}
@@ -34,7 +34,7 @@ function ImpactBullet({ text }: Readonly<{ text: string }>) {
       </li>
     );
   }
-  return <li className="leading-relaxed">{text}</li>;
+  return <li className="leading-relaxed break-inside-avoid">{text}</li>;
 }
 
 /**
@@ -47,7 +47,7 @@ function Section({
   keepTogether = false,
 }: Readonly<{ title: string; children: React.ReactNode; keepTogether?: boolean }>) {
   return (
-    <section className={`mt-7 print:mt-5${keepTogether ? ' break-inside-avoid' : ''}`}>
+    <section className={`mt-7 print:mt-3${keepTogether ? ' break-inside-avoid' : ''}`}>
       <h2
         className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] break-after-avoid print:text-[13.5px]"
         style={{ color: NAVY, borderBottom: `2px solid ${NAVY}` }}
@@ -200,7 +200,7 @@ export default function ResumePage() {
         {/* Experience                                                        */}
         {/* ---------------------------------------------------------------- */}
         <Section title="Professional Experience">
-          <div className="space-y-4">
+          <div className="space-y-4 print:space-y-2">
             {experience.map((exp) => (
               <article key={exp.company}>
                 {exp.roles.map((role, ri) => {
@@ -234,7 +234,7 @@ export default function ResumePage() {
 
                     {role.results.length > 0 ? (
                       <ul
-                        className="mt-1.5 list-disc space-y-1 pl-5 text-[14px] print:text-[13.5px]"
+                        className="mt-1.5 list-disc space-y-1 print:space-y-0.5 pl-5 text-[14px] print:text-[13.5px]"
                         style={{ color: INK }}
                       >
                         {role.results.map((r) => (
