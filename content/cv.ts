@@ -260,7 +260,7 @@ export const cv: CV = {
           tech: [],
           results: [
             'Maintained accurate operational records by validating, standardizing, and digitizing data',
-            'Resolved missing, duplicate and inconsistent records through source-document verification',
+            'Resolved missing, duplicate, and inconsistent records through source-document verification',
             'Produced timely operational summaries supporting reporting and planning',
           ],
         },
