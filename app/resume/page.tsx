@@ -301,9 +301,6 @@ export default function ResumePage() {
                       {c.name}
                     </span>
                   )}
-                  {c.date ? (
-                    <span style={{ color: '#6f6a59' }}> ({c.date})</span>
-                  ) : null}
                 </span>
               </li>
             ))}

@@ -27,9 +27,6 @@ export function Certifications({ items }: { items: Certification[] }) {
                   {cert.name}
                 </span>
               )}
-              <span className="text-xs text-slate-400 dark:text-slate-500">
-                {cert.date}
-              </span>
             </div>
             <p className="text-sm text-slate-600 dark:text-slate-300">
               {cert.issuer}
