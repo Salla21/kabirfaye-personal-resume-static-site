@@ -172,12 +172,12 @@ export default function ResumePage() {
                   key={part.id}
                   className="inline-flex items-center gap-x-2"
                 >
-                  {i > 0 ? (
+                  {part.node}
+                  {i < contactParts.length - 1 ? (
                     <span aria-hidden style={{ color: '#B9B2A2' }}>
                       |
                     </span>
                   ) : null}
-                  {part.node}
                 </span>
               ))}
             </p>
