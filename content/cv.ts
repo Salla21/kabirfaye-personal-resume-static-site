@@ -105,7 +105,7 @@ export const cv: CV = {
   },
 
   summary:
-    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years across technology and data operations, including 9+ years in AWS cloud, DevOps, architecture, networking, automation, and programming. Led multimillion-dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across DACH and EMEA.',
+    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years of experience across technology and data operations, including 9+ years in AWS cloud, DevOps, architecture, networking, automation, and programming. Led multimillion-dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across DACH and EMEA.',
 
   impact: [
     {
@@ -163,7 +163,7 @@ export const cv: CV = {
             'Managed Aviatrix multicloud networking across AWS and Azure, including ActiveMesh, SmartGroups, Distributed Cloud Firewall, and centralized egress',
             'Built observability across Datadog, Prisma Cloud, Prometheus, Grafana, CloudWatch, GuardDuty, and Security Hub, with automated runbooks and structured incident response; MTTR fell by 25%',
             'Grew and led a double-digit AWS engineering team across DACH and EMEA through hiring, onboarding, mentoring, and career frameworks that reduced attrition and built a promotion pipeline',
-            'Defined and rolled out engineering standards (code review, IaC patterns, and documentation) adopted across all delivery teams, and led knowledge transfer on Agentic AI (Bedrock), local LLMs, and CI/CD shift-left',
+            'Defined and rolled out engineering standards (code review, IaC patterns, and documentation) adopted across all delivery teams, and led knowledge transfer on agentic AI (Bedrock), local LLMs, and CI/CD shift-left',
           ],
         },
       ],
@@ -187,7 +187,7 @@ export const cv: CV = {
           results: [
             'Multi-Account AWS Foundations: Designed and scaled secure multi-account AWS environments using AWS Organizations, SCPs, Control Tower, centralized logging, and cross-account IAM roles across development, staging, and production workloads',
             'Reusable Terraform Architecture: Authored reusable Terraform modules for VPC, ECS, RDS, IAM, ALB, security groups, and environment baselines, cutting new environment provisioning from days to under 2 hours and improving deployment consistency',
-            'CI/CD at Scale: Built and operated CI/CD pipelines using Jenkins, GitLab CI, GitHub, CodePipeline, CodeBuild, and CodeDeploy; release frequency increased by 40% and manual-deployment configuration drift dropped',
+            'CI/CD at Scale: Built and operated CI/CD pipelines using Jenkins, GitLab CI, GitHub, CodePipeline, CodeBuild, and CodeDeploy; release frequency increased by 40% and manual deployment effort and configuration drift decreased',
             'Network & Security Architecture: Architected hub-and-spoke VPC topologies with Transit Gateway, custom route tables, private subnet segmentation, security groups, and IAM least-privilege controls to reduce identity and lateral-movement risk',
             'Disaster Recovery & Resilience: Designed high-availability and multi-region disaster recovery architectures, automated failover testing, documented operational runbooks, and established RTO/RPO-driven recovery practices for critical workloads',
             'Database & Application Operations: Managed RDS, DynamoDB, database snapshots, read replicas, lifecycle policies, and performance tuning in collaboration with application engineering teams to improve reliability and response times',
@@ -259,7 +259,7 @@ export const cv: CV = {
           dates: '',
           tech: [],
           results: [
-            'Maintained accurate operational records by validating, standardizing and digitizing data',
+            'Maintained accurate operational records by validating, standardizing, and digitizing data',
             'Resolved missing, duplicate and inconsistent records through source-document verification',
             'Produced timely operational summaries supporting reporting and planning',
           ],
@@ -417,7 +417,7 @@ export const cv: CV = {
         'SageMaker',
         'Kiro IDE',
         'Model Context Protocol (MCP)',
-        'Agentic AI',
+        'agentic AI',
         'Claude Code',
         'GitHub Copilot',
         'Event-Driven AI Workflows',
