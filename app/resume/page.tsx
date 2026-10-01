@@ -261,11 +261,11 @@ export default function ResumePage() {
         {/* Certifications                                                    */}
         {/* ---------------------------------------------------------------- */}
         <Section title="Certifications & Professional Development" keepTogether>
-          <ul className="grid grid-cols-1 gap-x-8 gap-y-1 sm:grid-cols-2 print:grid-cols-2">
+          <ul className="columns-1 gap-x-8 sm:columns-2 print:columns-2">
             {certifications.map((c) => (
               <li
                 key={`${c.name}-${c.issuer}-${c.date}`}
-                className="flex items-baseline gap-2 text-[13.5px] print:text-[13.5px]"
+                className="mb-1 flex break-inside-avoid items-baseline gap-2 text-[13.5px] print:text-[13.5px]"
               >
                 <span
                   aria-hidden
