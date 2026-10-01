@@ -45,11 +45,18 @@ function Section({
   title,
   children,
   keepTogether = false,
-}: Readonly<{ title: string; children: React.ReactNode; keepTogether?: boolean }>) {
+  tight = false,
+}: Readonly<{
+  title: string;
+  children: React.ReactNode;
+  keepTogether?: boolean;
+  tight?: boolean;
+}>) {
+  const top = tight ? 'mt-4 print:mt-1.5' : 'mt-7 print:mt-2';
   return (
-    <section className={`mt-7 print:mt-3${keepTogether ? ' break-inside-avoid' : ''}`}>
+    <section className={`${top}${keepTogether ? ' break-inside-avoid' : ''}`}>
       <h2
-        className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] break-after-avoid print:text-[13.5px]"
+        className="mb-3 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.16em] break-after-avoid print:mb-2 print:pb-1 print:text-[13.5px]"
         style={{ color: NAVY, borderBottom: `2px solid ${NAVY}` }}
       >
         {title}
@@ -99,25 +106,6 @@ export default function ResumePage() {
       ),
     });
   }
-  if (header.contacts.github) {
-    contactParts.push({
-      id: 'github',
-      node: (
-        <a
-          href={header.contacts.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium hover:underline"
-          style={{ color: NAVY }}
-        >
-          {header.contacts.github
-            .replace(/^https?:\/\//, '')
-            .replace(/\?tab=repositories$/, '')}
-        </a>
-      ),
-    });
-  }
-
   return (
     // Force a light, print-safe surface regardless of the site's dark theme.
     <div
@@ -184,7 +172,7 @@ export default function ResumePage() {
           ) : null}
 
           <div
-            className="mx-auto mt-3 h-[3px] w-full print:mt-2"
+            className="mx-auto mt-2.5 h-[3px] w-full print:mt-2"
             style={{ backgroundColor: NAVY }}
           />
         </header>
@@ -192,7 +180,7 @@ export default function ResumePage() {
         {/* ---------------------------------------------------------------- */}
         {/* Summary                                                           */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Executive Summary">
+        <Section title="Executive Summary" tight>
           <p className="text-justify leading-relaxed">{summary}</p>
         </Section>
 
@@ -200,7 +188,7 @@ export default function ResumePage() {
         {/* Experience                                                        */}
         {/* ---------------------------------------------------------------- */}
         <Section title="Professional Experience">
-          <div className="space-y-4 print:space-y-2">
+          <div className="space-y-4 print:space-y-1.5">
             {experience.map((exp) => (
               <article key={exp.company}>
                 {exp.roles.map((role, ri) => {
@@ -251,10 +239,9 @@ export default function ResumePage() {
         </Section>
 
         {/* ---------------------------------------------------------------- */}
+        {/* Technical Expertise | Skills: placed before Certifications */}
         {/* ---------------------------------------------------------------- */}
-        {/* Technical Expertise (skills): placed before Education */}
-        {/* ---------------------------------------------------------------- */}
-        <Section title="Technical Expertise">
+        <Section title="Technical Expertise | Skills">
           <div className="space-y-1.5">
             {skills.map((group) => (
               <p
