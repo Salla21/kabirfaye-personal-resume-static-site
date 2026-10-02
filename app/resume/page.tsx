@@ -180,7 +180,7 @@ export default function ResumePage() {
         {/* ---------------------------------------------------------------- */}
         {/* Summary                                                           */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Executive Summary" tight>
+        <Section title="Professional Summary" tight>
           <p className="text-justify leading-relaxed">{summary}</p>
         </Section>
 
@@ -241,7 +241,7 @@ export default function ResumePage() {
         {/* ---------------------------------------------------------------- */}
         {/* Technical Expertise | Skills: placed before Certifications */}
         {/* ---------------------------------------------------------------- */}
-        <Section title="Technical Expertise | Skills">
+        <Section title="Technical Skills">
           <div className="space-y-1.5">
             {skills.map((group) => (
               <p
@@ -261,37 +261,52 @@ export default function ResumePage() {
         {/* Certifications                                                    */}
         {/* ---------------------------------------------------------------- */}
         <Section title="Certifications & Professional Development" keepTogether>
-          <ul className="columns-1 gap-x-8 sm:columns-2 print:columns-2">
-            {certifications.map((c) => (
-              <li
-                key={`${c.name}-${c.issuer}-${c.date}`}
-                className="mb-1 flex break-inside-avoid items-baseline gap-2 text-[13.5px] print:text-[13.5px]"
-              >
-                <span
-                  aria-hidden
-                  className="mt-[6px] h-[5px] w-[5px] shrink-0 rounded-full"
-                  style={{ backgroundColor: NAVY }}
-                />
-                <span>
-                  {c.url ? (
-                    <a
-                      href={c.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-semibold hover:underline"
-                      style={{ color: INK }}
+          {([
+            { heading: 'Certifications', items: certifications.filter((c) => c.kind !== 'development') },
+            { heading: 'Professional Development', items: certifications.filter((c) => c.kind === 'development') },
+          ] as const).map((grp) =>
+            grp.items.length > 0 ? (
+              <div key={grp.heading} className="mt-2 first:mt-0">
+                <h3
+                  className="mb-1 text-[12px] font-bold uppercase tracking-[0.1em]"
+                  style={{ color: NAVY }}
+                >
+                  {grp.heading}
+                </h3>
+                <ul className="columns-1 gap-x-8 sm:columns-2 print:columns-2">
+                  {grp.items.map((c) => (
+                    <li
+                      key={`${c.name}-${c.issuer}-${c.date}`}
+                      className="mb-1 flex break-inside-avoid items-baseline gap-2 text-[13.5px] print:text-[13.5px]"
                     >
-                      {c.name}
-                    </a>
-                  ) : (
-                    <span className="font-semibold" style={{ color: INK }}>
-                      {c.name}
-                    </span>
-                  )}
-                </span>
-              </li>
-            ))}
-          </ul>
+                      <span
+                        aria-hidden
+                        className="mt-[6px] h-[5px] w-[5px] shrink-0 rounded-full"
+                        style={{ backgroundColor: NAVY }}
+                      />
+                      <span>
+                        {c.url ? (
+                          <a
+                            href={c.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold hover:underline"
+                            style={{ color: INK }}
+                          >
+                            {c.name}
+                          </a>
+                        ) : (
+                          <span className="font-semibold" style={{ color: INK }}>
+                            {c.name}
+                          </span>
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null,
+          )}
         </Section>
 
         {/* ---------------------------------------------------------------- */}
