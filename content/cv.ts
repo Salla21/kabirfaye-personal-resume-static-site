@@ -107,7 +107,7 @@ export const cv: CV = {
   },
 
   summary:
-    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years of experience across technology and data operations, including 9+ years in AWS cloud, DevOps, architecture, networking, automation, and programming. Led multimillion-dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across different organizations.',
+    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years of experience across technology and data operations, including 9+ years in AWS cloud, DevOps, architecture, networking, automation, and programming. Led multimillion-dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across consulting and enterprise delivery environments.',
 
   impact: [
     {

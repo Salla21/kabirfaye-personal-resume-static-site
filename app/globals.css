@@ -46,8 +46,14 @@ body {
   .no-print {
     display: none !important;
   }
-  body {
-    @apply bg-white text-black;
+  /* Force a white page background even when the site is in dark mode, so the
+     dark body color never shows below the resume sheet in the exported PDF. */
+  html,
+  html.dark,
+  body,
+  html.dark body {
+    background: #ffffff !important;
+    color: #000000 !important;
   }
   /* Ensure backgrounds/colors on the resume are honored by the printer. */
   * {

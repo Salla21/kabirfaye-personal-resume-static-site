@@ -273,7 +273,7 @@ export default function ResumePage() {
                 >
                   {grp.heading}
                 </h3>
-                <ul className="columns-1 gap-x-8 sm:columns-2 print:columns-2">
+                <ul className="space-y-1">
                   {grp.items.map((c) => (
                     <li
                       key={`${c.name}-${c.issuer}-${c.date}`}
