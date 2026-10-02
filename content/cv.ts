@@ -12,6 +12,8 @@ export interface LanguageProficiency {
 
 export interface ContactLinks {
   email: string;
+  /** Shown in the PDF/print output only (hidden on the public web page). Leave empty to hide. */
+  phone?: string;
   linkedin: string;
   github: string;
   /** Path to a PDF resume placed in /public, or an external URL. Leave empty to hide. */
@@ -96,6 +98,7 @@ export const cv: CV = {
     location: 'Stuttgart, Baden-Württemberg, Germany',
     contacts: {
       email: 'fayekabir21@yahoo.com',
+      phone: '+49 152 24785912',
       linkedin: 'https://www.linkedin.com/in/kabir-faye',
       github: 'https://github.com/Salla21',
       pdf: '/files/Kabir-Faye-CV.pdf', // real generated PDF, opens in browser PDF viewer
@@ -107,7 +110,7 @@ export const cv: CV = {
   },
 
   summary:
-    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years of experience across technology and data operations, including 9+ years in AWS cloud, DevOps, architecture, networking, automation, and programming. Led multimillion-dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Builds and mentors AWS engineering teams across consulting and enterprise delivery environments.',
+    'Cloud Solutions Architect and Head of AWS Engineering with 12+ years of experience across technology and data operations, including 9+ years in AWS cloud, DevOps, architecture, networking, automation, and programming. Led multimillion-dollar cloud transformations across automotive and retail. Designs and ships generative AI solutions such as multi-agent architectures, RAG pipelines, and AI/ML integrations with enterprise systems. Certified at Professional and Specialty levels across AWS and Aviatrix multicloud networking. Experienced in building and mentoring AWS engineering teams across consulting and enterprise delivery environments.',
 
   impact: [
     {
@@ -189,7 +192,7 @@ export const cv: CV = {
             'Multi-Account AWS Foundations: Designed and scaled secure multi-account AWS environments using AWS Organizations, SCPs, Control Tower, centralized logging, and cross-account IAM roles across development, staging, and production workloads',
             'Team Leadership & Growth: Led an 11-person AWS engineering team, owning hiring, onboarding, mentoring, technical standards, and career development that reduced attrition and built a promotion pipeline',
             'Reusable Terraform Architecture: Authored reusable Terraform modules for VPC, ECS, RDS, IAM, ALB, security groups, and environment baselines, cutting new environment provisioning from days to under 2 hours and improving deployment consistency',
-            'CI/CD at Scale: Built and operated CI/CD pipelines using Jenkins, GitLab CI, GitHub, CodePipeline, CodeBuild, and CodeDeploy; release frequency increased by 40% and manual deployment effort and configuration drift decreased',
+            'CI/CD at Scale: Built and operated CI/CD pipelines using Jenkins, GitLab CI, GitHub, CodePipeline, CodeBuild, and CodeDeploy; increased release frequency by 40% while reducing manual deployment effort and configuration drift',
             'Network & Security Architecture: Architected hub-and-spoke VPC topologies with Transit Gateway, custom route tables, private subnet segmentation, security groups, and IAM least-privilege controls to reduce identity and lateral-movement risk',
             'Disaster Recovery & Resilience: Designed high-availability and multi-region disaster recovery architectures, automated failover testing, documented operational runbooks, and established RTO/RPO-driven recovery practices for critical workloads',
             'Database & Application Operations: Managed RDS, DynamoDB, database snapshots, read replicas, lifecycle policies, and performance tuning in collaboration with application engineering teams to improve reliability and response times',
@@ -217,7 +220,7 @@ export const cv: CV = {
             'Docker',
           ],
           results: [
-            'Migration Delivery: Led end-to-end AWS migration engagements for enterprise clients, producing Statements of Work, Proofs of Concept, architecture diagrams, and phased migration roadmaps that cut time-to-cloud by an average of 35% against client self-managed estimates',
+            'Migration Delivery: Led end-to-end AWS migration engagements for enterprise clients, producing Statements of Work, Proofs of Concept, architecture diagrams, and phased migration roadmaps that reduced time-to-cloud by an average of 35% compared with client-managed delivery estimates',
             'Architecture Design: Designed target-state AWS architectures covering networking, compute, storage, IAM, monitoring, and compliance controls, translating business requirements into documented technical solutions aligned to AWS Well-Architected best practices',
             'Cross-Functional Delivery: Partnered with client security, DevOps, and development teams to harden cloud infrastructure, deliver operational runbooks, and conduct stakeholder workshops supporting independent operations after handoff',
             'Post-Deployment Support: Provided architecture reviews, troubleshooting guidance, technical documentation, and knowledge transfer to help client teams operate and scale AWS environments independently',

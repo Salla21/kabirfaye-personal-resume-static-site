@@ -171,6 +171,17 @@ export default function ResumePage() {
             </p>
           ) : null}
 
+          {header.contacts.phone ? (
+            <p className="hidden print:block print:text-[13.5px] print:mt-1">
+              <a
+                href={`tel:${header.contacts.phone.replace(/\s+/g, '')}`}
+                style={{ color: INK }}
+              >
+                {header.contacts.phone}
+              </a>
+            </p>
+          ) : null}
+
           <div
             className="mx-auto mt-2.5 h-[3px] w-full print:mt-2"
             style={{ backgroundColor: NAVY }}
@@ -342,12 +353,12 @@ export default function ResumePage() {
                 <span key={l.name} className="inline-flex items-center gap-x-2">
                   {i > 0 ? (
                     <span aria-hidden style={{ color: '#B9B2A2' }}>
-                      ·
+                      |
                     </span>
                   ) : null}
                   <span>
                     <span className="font-bold" style={{ color: NAVY }}>
-                      {l.name}
+                      {l.name}:
                     </span>{' '}
                     <span style={{ color: INK }}>{l.level}</span>
                   </span>
